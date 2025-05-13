@@ -1,7 +1,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { CheckCircle, Mountain, MapPin, Phone, Mail, Award, UserCircle, GraduationCap, Briefcase, Dog, Club, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { CheckCircle, Mountain, MapPin, Phone, Mail, Award, CircleUser, GraduationCap, Briefcase, Dog, Club, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
@@ -116,14 +116,19 @@ export function WhyChooseUsSection() {
               <Card className="shadow-lg">
                 <CardHeader>
                   <CardTitle className="text-2xl flex items-center">
-                    <UserCircle className="h-7 w-7 mr-3 text-primary" />
+                    <CircleUser className="h-7 w-7 mr-3 text-primary" />
                     Meet Russ Hunt - Founder
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3 text-lg">
                   <div className="flex items-center">
                      <Avatar className="h-24 w-24 mr-4">
-                       <AvatarImage src="https://storage.googleapis.com/msgsndr/Gzu2iW2sZuZiVlnRqNtN/media/6823d471b44e3c41ed37ded7.jpeg" alt="Russ Hunt - Internet Assets Founder" data-ai-hint="person portrait" />
+                       <AvatarImage 
+                        src="https://storage.googleapis.com/msgsndr/Gzu2iW2sZuZiVlnRqNtN/media/6823d471b44e3c41ed37ded7.jpeg" 
+                        alt="Russ Hunt - Internet Assets Founder" 
+                        data-ai-hint="person portrait"
+                        className="object-cover object-top"
+                        />
                        <AvatarFallback>RH</AvatarFallback>
                      </Avatar>
                      <p className="text-xl font-semibold">Russ Hunt, ASU Small Business Graduate</p>
