@@ -6,7 +6,7 @@ import Image from 'next/image';
 export function HeroSection() {
   return (
     <section className="relative bg-gradient-to-b from-background to-secondary/30 py-20 md:py-32 overflow-hidden">
-      <div className="absolute inset-0 opacity-[0.06] dark:opacity-[0.03]">
+      <div className="absolute inset-0 opacity-20 dark:opacity-10">
          <Image
             src="https://storage.googleapis.com/msgsndr/Gzu2iW2sZuZiVlnRqNtN/media/6823d47175cc4637285fee3b.jpeg"
             alt="Abstract background representing digital growth and internet assets"
