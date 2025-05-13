@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { BookingModal } from '@/components/BookingModal';
 
 export function ContactCtaSection() {
   return (
@@ -14,9 +15,17 @@ export function ContactCtaSection() {
           Let's discuss how Internet Assets can elevate your online presence. Schedule your free, no-obligation consultation today and take the first step towards digital market leadership.
         </p>
         <div className="mt-10">
-          <Button size="lg" variant="secondary" asChild className="text-lg py-4 px-8 shadow-lg hover:shadow-xl transition-shadow bg-accent text-accent-foreground hover:bg-accent/90">
-            <Link href="mailto:MARKETING@INTERNET-ASSETS.COM?subject=Consultation Request">Schedule Free Consultation</Link>
-          </Button>
+          <BookingModal
+            trigger={
+              <Button
+                size="lg"
+                variant="secondary"
+                className="text-lg py-4 px-8 shadow-lg hover:shadow-xl transition-shadow bg-accent text-accent-foreground hover:bg-accent/90"
+              >
+                Schedule Free Consultation
+              </Button>
+            }
+          />
         </div>
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
           <div className="flex items-start space-x-4 p-6 bg-background/10 rounded-lg">
