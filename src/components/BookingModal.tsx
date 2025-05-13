@@ -14,30 +14,43 @@ interface BookingModalProps {
 }
 
 export function BookingModal({ trigger }: BookingModalProps) {
-  const iframeId = "1N973hnHsYsJ7Q66OYYB_booking_calendar";
+  // The widget ID from the src URL
+  const widgetId = "1N973hnHsYsJ7Q66OYYB";
+  // A consistent ID for the iframe, incorporating the widgetId.
+  // The external script is expected to find and initialize this iframe.
+  const iframeId = `${widgetId}_booking_embed`;
 
   return (
     <Dialog>
       <DialogTrigger asChild>{trigger}</DialogTrigger>
-      <DialogContent className="sm:max-w-[90vw] md:max-w-[80vw] lg:max-w-[700px] xl:max-w-[900px] p-0 overflow-hidden min-h-[70vh] flex flex-col">
-        {/* The iframe container will take up all available space within the DialogContent */}
-        <div className="flex-grow">
-          <iframe
-            src="https://api.internet-assets.com/widget/booking/1N973hnHsYsJ7Q66OYYB"
-            style={{ width: '100%', height: '100%', border: 'none', overflow: 'auto' }} // allow overflow for calendar
-            scrolling="yes" // allow scrolling within iframe
-            id={iframeId}
-            title="Booking Calendar"
-            allowFullScreen
-          ></iframe>
-        </div>
-        {/* The script should be loaded to make the iframe work correctly. */}
+      <DialogContent className="sm:max-w-[90vw] md:max-w-[80vw] lg:max-w-[700px] xl:max-w-[900px] p-0 overflow-y-auto max-h-[90vh]">
+        {/*
+          The iframe's height is expected to be set by the form_embed.js script.
+          - width: '100%' makes it responsive horizontally.
+          - border: 'none' removes default iframe border.
+          - overflow: 'hidden' and scrolling="no" assume the script adjusts height to fit content, avoiding iframe scrollbars.
+          - display: 'block' helps prevent unexpected spacing issues.
+          - minHeight: provides a sensible default height before the script loads or if it fails to resize.
+          The DialogContent has overflow-y-auto and max-h-[90vh] to allow scrolling if the iframe becomes very tall.
+        */}
+        <iframe
+          src={`https://api.internet-assets.com/widget/booking/${widgetId}`}
+          style={{
+            width: '100%',
+            border: 'none',
+            overflow: 'hidden',
+            display: 'block',
+            minHeight: '600px', // Sensible minimum height
+          }}
+          scrolling="no"
+          id={iframeId}
+          title="Booking Calendar"
+        ></iframe>
         <Script
           src="https://api.internet-assets.com/js/form_embed.js"
           strategy="lazyOnload"
           onLoad={() => {
-            // console.log('Booking embed script loaded.');
-            // The script should automatically find and initialize the iframe with the matching ID
+            // console.log('Booking embed script loaded. It should find and initialize iframe with id:', iframeId);
           }}
         />
       </DialogContent>
