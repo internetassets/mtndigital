@@ -9,10 +9,10 @@ export function KeywordToolSection() {
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl">
-            Find Your Niche: <span className="text-primary">Arizona White Mountains SEO Keyword Generator</span>
+            Discover Your Keywords: <span className="text-primary">SEO Keyword Generator</span>
           </h2>
           <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
-            Discover potential keywords to target customers in Pinetop, Show Low, and across the White Mountains. Get a glimpse of how we approach SEO.
+            Explore potential keywords to target your ideal customers. Get a glimpse of how we approach SEO strategy.
           </p>
         </div>
         

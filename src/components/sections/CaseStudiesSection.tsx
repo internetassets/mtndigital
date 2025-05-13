@@ -7,34 +7,34 @@ import { ArrowRight } from 'lucide-react';
 
 const caseStudies = [
   {
-    title: 'Mountain View Cafe SEO Overhaul',
-    client: 'Local Pinetop Restaurant',
+    title: 'Artisan Cafe SEO Boost',
+    client: 'Local Cafe Business',
     imageSrc: 'https://picsum.photos/600/400?random=2',
-    imageAlt: 'Cozy interior of Mountain View Cafe',
-    imageHint: 'cozy restaurant',
-    description: 'Implemented a targeted local SEO strategy and revamped their Google Business Profile, resulting in a significant increase in online visibility and reservations.',
+    imageAlt: 'Cozy interior of a modern cafe',
+    imageHint: 'modern cafe',
+    description: 'Implemented a targeted local SEO strategy and revamped their online profiles, resulting in a significant increase in online visibility and customer engagement.',
     result: 'Increased online bookings by 40% within 3 months.',
-    keywords: 'Pinetop restaurant SEO, local cafe marketing White Mountains, Arizona dining visibility'
+    keywords: 'cafe SEO services, local restaurant marketing, online food business visibility'
   },
   {
-    title: 'High Country Outfitters E-commerce Growth',
-    client: 'Show Low Outdoor Gear Shop',
+    title: 'Retail E-commerce Expansion',
+    client: 'Online Gear Shop',
     imageSrc: 'https://picsum.photos/600/400?random=3',
-    imageAlt: 'Exterior of High Country Outfitters store',
-    imageHint: 'outdoor gear store',
-    description: 'Developed a new e-commerce website with enhanced SEO and user experience, leading to a surge in online sales and broader customer reach.',
+    imageAlt: 'E-commerce website on a laptop',
+    imageHint: 'ecommerce website',
+    description: 'Developed a new e-commerce platform with enhanced SEO and user experience, leading to a surge in online sales and broader customer reach.',
     result: 'Tripled website traffic and doubled online sales in 6 months.',
-    keywords: 'Show Low e-commerce SEO, Arizona outdoor retail marketing, White Mountains online store'
+    keywords: 'e-commerce SEO, online retail marketing, digital store growth'
   },
   {
-    title: 'Lakeside B&B Website Redesign',
-    client: 'Pinetop-Lakeside Bed & Breakfast',
+    title: 'Hospitality Website Redesign',
+    client: 'Boutique Accommodation Provider',
     imageSrc: 'https://picsum.photos/600/400?random=4',
-    imageAlt: 'Charming room at Lakeside B&B',
-    imageHint: 'bed breakfast room',
+    imageAlt: 'Charming room in a boutique hotel',
+    imageHint: 'boutique hotel room',
     description: 'Crafted a visually stunning and mobile-friendly website, improving direct bookings and reducing reliance on third-party platforms.',
     result: 'Achieved 60% increase in direct bookings.',
-    keywords: 'Pinetop-Lakeside web design, Arizona B&B marketing, hospitality SEO White Mountains'
+    keywords: 'hospitality web design, accommodation marketing, direct booking SEO'
   },
 ];
 
@@ -44,10 +44,10 @@ export function CaseStudiesSection() {
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl">
-            Proven <span className="text-primary">Success Stories</span> from the White Mountains
+            Proven <span className="text-primary">Success Stories</span>
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-            See how we've helped local Arizona businesses like yours thrive online.
+            See how we've helped businesses like yours thrive online.
           </p>
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">

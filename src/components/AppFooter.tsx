@@ -12,7 +12,7 @@ export function AppFooter() {
           <div>
             <Logo />
             <p className="mt-4 text-sm text-muted-foreground">
-              Elevating businesses in the White Mountains with expert digital marketing strategies.
+              Elevating businesses with expert digital marketing strategies and asset growth.
             </p>
             <div className="mt-6 flex space-x-4">
               <Link href="#" className="text-muted-foreground hover:text-primary">
@@ -33,7 +33,7 @@ export function AppFooter() {
             <div>
               <h3 className="text-sm font-semibold text-foreground tracking-wider uppercase">Solutions</h3>
               <ul role="list" className="mt-4 space-y-2">
-                <li><Link href="#services" className="text-sm text-muted-foreground hover:text-primary">Local SEO</Link></li>
+                <li><Link href="#services" className="text-sm text-muted-foreground hover:text-primary">SEO Services</Link></li>
                 <li><Link href="#services" className="text-sm text-muted-foreground hover:text-primary">Web Design</Link></li>
                 <li><Link href="#services" className="text-sm text-muted-foreground hover:text-primary">Content Marketing</Link></li>
                 <li><Link href="#keyword-tool" className="text-sm text-muted-foreground hover:text-primary">Keyword Tool</Link></li>
@@ -58,7 +58,7 @@ export function AppFooter() {
         </div>
         <div className="mt-12 border-t border-border pt-8">
           <p className="text-sm text-muted-foreground text-center">
-            &copy; {currentYear} White Mountain Digital. All rights reserved. Serving Pinetop-Lakeside, Show Low, and the greater White Mountains, Arizona region.
+            &copy; {currentYear} Internet Assets. All rights reserved. Helping businesses build valuable internet presence.
           </p>
         </div>
       </div>

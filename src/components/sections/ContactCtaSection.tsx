@@ -8,14 +8,14 @@ export function ContactCtaSection() {
     <section id="contact" className="py-16 md:py-24 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground">
       <div className="container mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-          Ready to Grow Your Business in the White Mountains?
+          Ready to Grow Your Internet Assets?
         </h2>
         <p className="mt-6 max-w-2xl mx-auto text-lg text-primary-foreground/90">
-          Let's discuss how White Mountain Digital can elevate your online presence. Schedule your free, no-obligation consultation today and take the first step towards local market leadership.
+          Let's discuss how Internet Assets can elevate your online presence. Schedule your free, no-obligation consultation today and take the first step towards digital market leadership.
         </p>
         <div className="mt-10">
           <Button size="lg" variant="secondary" asChild className="text-lg py-4 px-8 shadow-lg hover:shadow-xl transition-shadow bg-accent text-accent-foreground hover:bg-accent/90">
-            <Link href="mailto:contact@whitemountaindigital.example.com?subject=Consultation Request">Schedule Free Consultation</Link>
+            <Link href="mailto:contact@internetassets.example.com?subject=Consultation Request">Schedule Free Consultation</Link>
           </Button>
         </div>
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
@@ -23,7 +23,7 @@ export function ContactCtaSection() {
             <Phone className="h-8 w-8 text-accent flex-shrink-0 mt-1" />
             <div>
               <h3 className="text-xl font-semibold">Call Us</h3>
-              <p className="text-primary-foreground/80">Mon-Fri, 9am-5pm MST</p>
+              <p className="text-primary-foreground/80">Mon-Fri, 9am-5pm</p>
               <a href="tel:+15551234567" className="hover:underline text-lg">(555) 123-4567</a>
             </div>
           </div>
@@ -32,15 +32,15 @@ export function ContactCtaSection() {
             <div>
               <h3 className="text-xl font-semibold">Email Us</h3>
               <p className="text-primary-foreground/80">Get a response within 24 hours</p>
-              <a href="mailto:contact@whitemountaindigital.example.com" className="hover:underline text-lg break-all">contact@whitemountaindigital.example.com</a>
+              <a href="mailto:contact@internetassets.example.com" className="hover:underline text-lg break-all">contact@internetassets.example.com</a>
             </div>
           </div>
           <div className="flex items-start space-x-4 p-6 bg-background/10 rounded-lg">
             <MapPin className="h-8 w-8 text-accent flex-shrink-0 mt-1" />
             <div>
-              <h3 className="text-xl font-semibold">Our Area</h3>
-              <p className="text-primary-foreground/80">Serving Pinetop, Show Low & the White Mountains, AZ</p>
-              <p className="text-lg">Local Expertise, Statewide Reach</p>
+              <h3 className="text-xl font-semibold">Our Reach</h3>
+              <p className="text-primary-foreground/80">Serving businesses globally</p>
+              <p className="text-lg">Digital Expertise, Global Reach</p>
             </div>
           </div>
         </div>

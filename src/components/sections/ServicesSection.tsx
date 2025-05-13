@@ -5,39 +5,39 @@ import { Search, MonitorSmartphone, PenTool, Users, BarChart3, Mail } from 'luci
 const services = [
   {
     icon: <Search className="h-10 w-10 text-primary mb-4" />,
-    title: 'Local SEO Optimization',
-    description: 'Rank higher in White Mountains searches and attract more local customers. We optimize your online presence for Pinetop, Show Low, and beyond.',
-    keywords: 'White Mountains SEO, Pinetop local search, Show Low business ranking'
+    title: 'SEO Optimization',
+    description: 'Rank higher in search results and attract more customers. We optimize your online presence for maximum visibility.',
+    keywords: 'SEO services, search engine optimization, business ranking, organic traffic'
   },
   {
     icon: <MonitorSmartphone className="h-10 w-10 text-primary mb-4" />,
     title: 'Custom Web Design',
-    description: 'Beautiful, responsive websites that captivate visitors and convert them into loyal customers. Tailored for businesses in Arizona\'s high country.',
-    keywords: 'Arizona web design, responsive websites White Mountains, Pinetop web developer'
+    description: 'Beautiful, responsive websites that captivate visitors and convert them into loyal customers. Tailored for modern businesses.',
+    keywords: 'web design services, responsive websites, user experience design, website development'
   },
   {
     icon: <PenTool className="h-10 w-10 text-primary mb-4" />,
     title: 'Content Marketing',
-    description: 'Engaging, SEO-friendly content that tells your unique local story and builds authority in the White Mountains market.',
-    keywords: 'Content strategy Arizona, local business blogging, White Mountains storytelling'
+    description: 'Engaging, SEO-friendly content that tells your unique story and builds authority in your market.',
+    keywords: 'content strategy, business blogging, brand storytelling, content creation'
   },
   {
     icon: <Users className="h-10 w-10 text-primary mb-4" />,
     title: 'Social Media Management',
-    description: 'Connect with your community and build brand loyalty through effective social media strategies tailored for the White Mountains audience.',
-    keywords: 'White Mountains social media, local marketing Pinetop, Show Low Facebook ads'
+    description: 'Connect with your community and build brand loyalty through effective social media strategies tailored for your audience.',
+    keywords: 'social media marketing, SMM, community management, brand engagement'
   },
   {
     icon: <BarChart3 className="h-10 w-10 text-primary mb-4" />,
     title: 'PPC Advertising',
-    description: 'Targeted pay-per-click campaigns that drive immediate traffic and leads for your White Mountains business. Maximize your ROI.',
-    keywords: 'Arizona PPC, Google Ads White Mountains, local advertising Show Low'
+    description: 'Targeted pay-per-click campaigns that drive immediate traffic and leads for your business. Maximize your ROI.',
+    keywords: 'PPC services, Google Ads, paid advertising, online ad campaigns'
   },
   {
     icon: <Mail className="h-10 w-10 text-primary mb-4" />,
     title: 'Email Marketing',
-    description: 'Nurture leads and retain customers with personalized email campaigns designed for White Mountains businesses.',
-    keywords: 'Email campaigns Pinetop, Arizona local marketing, customer retention Show Low'
+    description: 'Nurture leads and retain customers with personalized email campaigns designed for engagement and conversion.',
+    keywords: 'email campaigns, marketing automation, customer retention, lead nurturing'
   },
 ];
 
@@ -47,10 +47,10 @@ export function ServicesSection() {
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl">
-            Our Digital Marketing Services for <span className="text-primary">Arizona's High Country</span>
+            Our Digital Marketing Services for <span className="text-primary">Business Growth</span>
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-            Comprehensive solutions to boost your online presence and achieve your business goals in the White Mountains.
+            Comprehensive solutions to boost your online presence and achieve your business goals.
           </p>
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">

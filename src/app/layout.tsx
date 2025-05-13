@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'White Mountain Digital | SEO & Web Design Experts',
-  description: 'Your local digital agency for SEO, web design, and online marketing in the White Mountains, Arizona. Serving Pinetop, Show Low, and surrounding areas.',
+  title: 'Internet Assets | Digital Growth Partner',
+  description: 'Your partner for SEO, web design, and online marketing. We help businesses grow their internet assets and achieve online success.',
 };
 
 export default function RootLayout({

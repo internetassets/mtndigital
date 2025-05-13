@@ -8,30 +8,29 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Lightbulb } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
-// Mock keyword generation logic
+// Mock keyword generation logic - generalized
 const generateMockKeywords = (industry: string): string[] => {
   const baseKeywords = [
-    "SEO services", "digital marketing", "local business", "online presence",
-    "web design", "content creation", "social media", "PPC ads",
-    "White Mountains", "Pinetop", "Show Low", "Arizona", "AZ"
+    "SEO services", "digital marketing", "online business", "web presence",
+    "website design", "content strategy", "social media marketing", "PPC management",
+    "keyword research", "target audience", "brand visibility", "online growth"
   ];
   
   const industrySpecific = industry.toLowerCase().split(" ").filter(word => word.length > 2);
   let generated: string[] = [];
 
   if (industrySpecific.length > 0) {
-    generated.push(`${industrySpecific.join(" ")} White Mountains`);
-    generated.push(`best ${industrySpecific.join(" ")} Pinetop AZ`);
-    generated.push(`local ${industrySpecific.join(" ")} Show Low`);
-    generated.push(`${industrySpecific[0]} SEO services Arizona`);
+    generated.push(`${industrySpecific.join(" ")} services`);
+    generated.push(`best ${industrySpecific.join(" ")} online`);
+    generated.push(`local ${industrySpecific.join(" ")} marketing`);
+    generated.push(`${industrySpecific[0]} SEO strategy`);
   }
 
-  // Add some generic local keywords
-  generated.push(`White Mountains ${industrySpecific[0] || baseKeywords[Math.floor(Math.random() * 4)]}`);
-  generated.push(`Pinetop ${industrySpecific[0] || baseKeywords[Math.floor(Math.random() * 4) + 4]}`);
-  generated.push(`Show Low ${baseKeywords[Math.floor(Math.random() * baseKeywords.length)]}`);
-  generated.push(`affordable ${industrySpecific[0] || 'digital marketing'} White Mountains`);
-
+  generated.push(`effective ${industrySpecific[0] || baseKeywords[Math.floor(Math.random() * 4)]}`);
+  generated.push(`top ${industrySpecific[0] || baseKeywords[Math.floor(Math.random() * 4) + 4]}`);
+  generated.push(`affordable ${baseKeywords[Math.floor(Math.random() * baseKeywords.length)]}`);
+  generated.push(`boost ${industrySpecific[0] || 'online presence'} for ${industrySpecific.join(" ") || 'your business'}`);
+  
   // Ensure unique keywords and limit to 5-7
   return Array.from(new Set(generated.filter(kw => kw))).slice(0, Math.floor(Math.random() * 3) + 5);
 };
@@ -78,12 +77,12 @@ export function KeywordForm() {
             type="text"
             value={industry}
             onChange={(e) => setIndustry(e.target.value)}
-            placeholder="e.g., 'Pinetop Bakery', 'Show Low Plumbing'"
+            placeholder="e.g., 'E-commerce Store', 'Local Bakery', 'Tech Startup'"
             className="w-full text-lg p-3"
             aria-label="Your Industry or Business Type"
           />
           <p className="mt-2 text-sm text-muted-foreground">
-            Enter a brief description of your business to get keyword ideas tailored for the White Mountains region.
+            Enter a brief description of your business to get keyword ideas for your target audience.
           </p>
         </div>
         <Button type="submit" className="w-full md:w-auto text-lg py-3 px-6" size="lg" disabled={isLoading}>
@@ -108,7 +107,7 @@ export function KeywordForm() {
               ))}
             </ul>
             <p className="mt-6 text-sm text-muted-foreground">
-              <strong>Note:</strong> These are AI-generated suggestions. For a comprehensive SEO strategy and keyword research tailored to your specific business goals in the White Mountains, please contact us for a consultation.
+              <strong>Note:</strong> These are AI-generated suggestions. For a comprehensive SEO strategy and keyword research tailored to your specific business goals, please contact us for a consultation.
             </p>
           </CardContent>
         </Card>
