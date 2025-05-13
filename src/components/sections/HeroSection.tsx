@@ -8,12 +8,12 @@ export function HeroSection() {
     <section className="relative bg-gradient-to-b from-background to-secondary/30 py-20 md:py-32 overflow-hidden">
       <div className="absolute inset-0 opacity-10 dark:opacity-5">
          <Image
-            src="https://picsum.photos/1920/1080?random=1"
-            alt="Abstract background representing digital connections"
+            src="https://picsum.photos/1920/1080?random=6"
+            alt="Abstract background representing digital growth and internet assets"
             layout="fill"
             objectFit="cover"
             priority
-            data-ai-hint="abstract technology"
+            data-ai-hint="digital network"
           />
       </div>
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
@@ -38,3 +38,4 @@ export function HeroSection() {
     </section>
   );
 }
+
