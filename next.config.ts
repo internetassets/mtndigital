@@ -28,6 +28,12 @@ const nextConfig: NextConfig = {
         hostname: 'www.sweetlogisticsllc.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.wmportablebuildings.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },

@@ -28,19 +28,19 @@ const caseStudies = [
     result: 'Increased organic traffic by 150% and doubled lead conversion rates.',
     keywords: 'car shipping SEO, enclosed auto transport, logistics marketing',
     linkText: 'View Sweet Logistics Project',
-    linkHref: '#'
+    linkHref: 'https://www.sweetlogisticsllc.com/'
   },
   {
-    title: 'Hospitality Website Redesign',
-    client: 'Boutique Accommodation Provider',
-    imageSrc: 'https://picsum.photos/600/400?random=4',
-    imageAlt: 'Charming room in a boutique hotel',
-    imageHint: 'boutique hotel room',
-    description: 'Crafted a visually stunning and mobile-friendly website, improving direct bookings and reducing reliance on third-party platforms.',
-    result: 'Achieved 60% increase in direct bookings.',
-    keywords: 'hospitality web design, accommodation marketing, direct booking SEO',
-    linkText: 'Read Full Case Study',
-    linkHref: '#'
+    title: 'WM Portable Buildings Showcase',
+    client: 'Graceland Portable Buildings Dealer',
+    imageSrc: 'https://www.wmportablebuildings.com/wp-content/uploads/2024/11/GRACELAND-PORTABLE-BUILDINGS-LOOK-FOR-THE-G-SHOW-LOW-AZ-look-for-the-G.png',
+    imageAlt: 'WM Portable Buildings - Graceland Portable Buildings Dealer',
+    imageHint: 'portable buildings',
+    description: 'Developed a user-friendly website showcasing a wide range of Graceland portable buildings, streamlining the customer inquiry and sales process in Show Low, AZ.',
+    result: 'Enhanced online presence and significantly improved lead generation for portable building sales.',
+    keywords: 'portable buildings, Graceland sheds, Show Low buildings, shed sales website, storage solutions',
+    linkText: 'Visit WM Portable Buildings',
+    linkHref: 'https://www.wmportablebuildings.com/'
   },
 ];
 
