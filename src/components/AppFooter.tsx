@@ -42,7 +42,6 @@ export function AppFooter() {
             <div>
               <h3 className="text-sm font-semibold text-foreground tracking-wider uppercase">Company</h3>
               <ul role="list" className="mt-4 space-y-2">
-                <li><Link href="#about-us" className="text-sm text-muted-foreground hover:text-primary">About Us</Link></li>
                 <li><Link href="#case-studies" className="text-sm text-muted-foreground hover:text-primary">Case Studies</Link></li>
                 <li><Link href="#contact" className="text-sm text-muted-foreground hover:text-primary">Contact</Link></li>
                  <li><Link href="#why-us" className="text-sm text-muted-foreground hover:text-primary">Why Choose Us</Link></li>
