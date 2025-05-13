@@ -1,7 +1,7 @@
 
 import Link from 'next/link';
 import { Logo } from '@/components/Logo';
-import { Facebook, Linkedin, Twitter } from 'lucide-react';
+import { Facebook, Linkedin, Twitter, Mountain } from 'lucide-react';
 
 export function AppFooter() {
   const currentYear = new Date().getFullYear();
@@ -12,7 +12,7 @@ export function AppFooter() {
           <div>
             <Logo />
             <p className="mt-4 text-sm text-muted-foreground">
-              Elevating businesses with expert digital marketing strategies and asset growth.
+              Elevating businesses in White Mountains, AZ &amp; Show Low, AZ with expert digital marketing strategies and asset growth for 15 years.
             </p>
             <div className="mt-6 flex space-x-4">
               <Link href="#" className="text-muted-foreground hover:text-primary">
@@ -42,9 +42,10 @@ export function AppFooter() {
             <div>
               <h3 className="text-sm font-semibold text-foreground tracking-wider uppercase">Company</h3>
               <ul role="list" className="mt-4 space-y-2">
-                <li><Link href="#why-us" className="text-sm text-muted-foreground hover:text-primary">About Us</Link></li>
+                <li><Link href="#about-us" className="text-sm text-muted-foreground hover:text-primary">About Us</Link></li>
                 <li><Link href="#case-studies" className="text-sm text-muted-foreground hover:text-primary">Case Studies</Link></li>
                 <li><Link href="#contact" className="text-sm text-muted-foreground hover:text-primary">Contact</Link></li>
+                 <li><Link href="#why-us" className="text-sm text-muted-foreground hover:text-primary">Why Choose Us</Link></li>
               </ul>
             </div>
              <div>
@@ -58,7 +59,7 @@ export function AppFooter() {
         </div>
         <div className="mt-12 border-t border-border pt-8">
           <p className="text-sm text-muted-foreground text-center">
-            &copy; {currentYear} Internet Assets. All rights reserved. Helping businesses build valuable internet presence.
+            &copy; {currentYear} Internet Assets. All rights reserved. Located in Show Low, AZ. Contact Russ Hunt at (928) 892-5233 or MARKETING@INTERNET-ASSETS.COM.
           </p>
         </div>
       </div>

@@ -10,6 +10,7 @@ const navItems = [
   { name: 'Case Studies', href: '#case-studies' },
   { name: 'Keyword Tool', href: '#keyword-tool' },
   { name: 'Why Us', href: '#why-us' },
+  { name: 'About Us', href: '#about-us' },
 ];
 
 export function AppHeader() {

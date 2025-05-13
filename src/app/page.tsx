@@ -6,6 +6,7 @@ import { ServicesSection } from '@/components/sections/ServicesSection';
 import { CaseStudiesSection } from '@/components/sections/CaseStudiesSection';
 import { KeywordToolSection } from '@/components/sections/KeywordToolSection';
 import { WhyChooseUsSection } from '@/components/sections/WhyChooseUsSection';
+import { AboutUsSection } from '@/components/sections/AboutUsSection';
 import { ContactCtaSection } from '@/components/sections/ContactCtaSection';
 
 export default function HomePage() {
@@ -18,6 +19,7 @@ export default function HomePage() {
         <CaseStudiesSection />
         <KeywordToolSection />
         <WhyChooseUsSection />
+        <AboutUsSection />
         <ContactCtaSection />
       </main>
       <AppFooter />

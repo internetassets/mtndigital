@@ -15,7 +15,7 @@ export function ContactCtaSection() {
         </p>
         <div className="mt-10">
           <Button size="lg" variant="secondary" asChild className="text-lg py-4 px-8 shadow-lg hover:shadow-xl transition-shadow bg-accent text-accent-foreground hover:bg-accent/90">
-            <Link href="mailto:contact@internetassets.example.com?subject=Consultation Request">Schedule Free Consultation</Link>
+            <Link href="mailto:MARKETING@INTERNET-ASSETS.COM?subject=Consultation Request">Schedule Free Consultation</Link>
           </Button>
         </div>
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
@@ -24,7 +24,7 @@ export function ContactCtaSection() {
             <div>
               <h3 className="text-xl font-semibold">Call Us</h3>
               <p className="text-primary-foreground/80">Mon-Fri, 9am-5pm</p>
-              <a href="tel:+15551234567" className="hover:underline text-lg">(555) 123-4567</a>
+              <a href="tel:9288925233" className="hover:underline text-lg">(928) 892-5233</a>
             </div>
           </div>
           <div className="flex items-start space-x-4 p-6 bg-background/10 rounded-lg">
@@ -32,7 +32,7 @@ export function ContactCtaSection() {
             <div>
               <h3 className="text-xl font-semibold">Email Us</h3>
               <p className="text-primary-foreground/80">Get a response within 24 hours</p>
-              <a href="mailto:contact@internetassets.example.com" className="hover:underline text-lg break-all">contact@internetassets.example.com</a>
+              <a href="mailto:MARKETING@INTERNET-ASSETS.COM" className="hover:underline text-lg break-all">MARKETING@INTERNET-ASSETS.COM</a>
             </div>
           </div>
           <div className="flex items-start space-x-4 p-6 bg-background/10 rounded-lg">
