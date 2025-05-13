@@ -1,7 +1,7 @@
 
 import Link from 'next/link';
 import { Logo } from '@/components/Logo';
-import { Facebook, Linkedin, Twitter, Mountain } from 'lucide-react';
+import { Facebook, Linkedin, Twitter, Instagram, MapPin } from 'lucide-react';
 
 export function AppFooter() {
   const currentYear = new Date().getFullYear();
@@ -15,17 +15,25 @@ export function AppFooter() {
               Elevating businesses in White Mountains, AZ &amp; Show Low, AZ with expert digital marketing strategies and asset growth for 15 years.
             </p>
             <div className="mt-6 flex space-x-4">
-              <Link href="#" className="text-muted-foreground hover:text-primary">
+              <Link href="https://www.facebook.com/internetassets" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
                 <span className="sr-only">Facebook</span>
                 <Facebook className="h-6 w-6" />
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary">
-                <span className="sr-only">Twitter</span>
+              <Link href="https://x.com/OptimizenWP" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
+                <span className="sr-only">X (Twitter)</span>
                 <Twitter className="h-6 w-6" />
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-primary">
+              <Link href="https://www.linkedin.com/in/internetassets/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
                 <span className="sr-only">LinkedIn</span>
                 <Linkedin className="h-6 w-6" />
+              </Link>
+              <Link href="https://www.instagram.com/localinternetassets/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
+                <span className="sr-only">Instagram</span>
+                <Instagram className="h-6 w-6" />
+              </Link>
+              <Link href="https://maps.app.goo.gl/c3GhL8V8dcQZjbnj7" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
+                <span className="sr-only">Google Maps</span>
+                <MapPin className="h-6 w-6" />
               </Link>
             </div>
           </div>

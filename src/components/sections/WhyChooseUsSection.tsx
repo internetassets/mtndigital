@@ -1,6 +1,7 @@
 
 import Image from 'next/image';
-import { CheckCircle, Mountain, MapPin, Phone, Mail, Award, UserCircle, GraduationCap, Briefcase, Dog, Club } from 'lucide-react';
+import Link from 'next/link';
+import { CheckCircle, Mountain, MapPin, Phone, Mail, Award, UserCircle, GraduationCap, Briefcase, Dog, Club, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
@@ -87,6 +88,26 @@ export function WhyChooseUsSection() {
                     <div className="flex items-center">
                       <Award className="h-5 w-5 mr-2 text-primary" />
                       <span>Over 15 Years of Digital Marketing Experience</span>
+                    </div>
+                  </div>
+                  <div className="mt-4 pt-4 border-t border-border/50">
+                    <h4 className="text-md font-semibold mb-3 text-foreground">Connect With Us:</h4>
+                    <div className="flex space-x-4 items-center">
+                      <Link href="https://www.facebook.com/internetassets" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary" aria-label="Facebook">
+                        <Facebook className="h-6 w-6" />
+                      </Link>
+                      <Link href="https://x.com/OptimizenWP" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary" aria-label="X (formerly Twitter)">
+                        <Twitter className="h-6 w-6" />
+                      </Link>
+                      <Link href="https://www.instagram.com/localinternetassets/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary" aria-label="Instagram">
+                        <Instagram className="h-6 w-6" />
+                      </Link>
+                      <Link href="https://www.linkedin.com/in/internetassets/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary" aria-label="LinkedIn">
+                        <Linkedin className="h-6 w-6" />
+                      </Link>
+                      <Link href="https://maps.app.goo.gl/c3GhL8V8dcQZjbnj7" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary" aria-label="Google Maps">
+                        <MapPin className="h-6 w-6" />
+                      </Link>
                     </div>
                   </div>
                 </CardContent>
