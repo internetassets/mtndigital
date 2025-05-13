@@ -1,7 +1,7 @@
 
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
 export function ContactCtaSection() {
   return (
@@ -22,7 +22,7 @@ export function ContactCtaSection() {
           <div className="flex items-start space-x-4 p-6 bg-background/10 rounded-lg">
             <Phone className="h-8 w-8 text-accent flex-shrink-0 mt-1" />
             <div>
-              <h3 className="text-xl font-semibold">Call Us</h3>
+              <h3 className="text-xl font-semibold">Call or Text Us</h3>
               <p className="text-primary-foreground/80">Mon-Fri, 9am-5pm</p>
               <a href="tel:9288925233" className="hover:underline text-lg">(928) 892-5233</a>
             </div>
@@ -39,9 +39,34 @@ export function ContactCtaSection() {
             <MapPin className="h-8 w-8 text-accent flex-shrink-0 mt-1" />
             <div>
               <h3 className="text-xl font-semibold">Our Reach</h3>
-              <p className="text-primary-foreground/80">Serving businesses globally</p>
-              <p className="text-lg">Digital Expertise, Global Reach</p>
+              <p className="text-primary-foreground/80">Serving businesses locally to get more calls, leads and sales.</p>
+              <p className="text-lg">White Mountains, AZ & Show Low, AZ</p>
             </div>
+          </div>
+        </div>
+        <div className="mt-12 pt-8 border-t border-primary-foreground/20">
+          <h3 className="text-xl font-semibold mb-6">Connect With Us</h3>
+          <div className="flex justify-center space-x-6">
+            <Link href="https://www.facebook.com/internetassets" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-accent">
+              <span className="sr-only">Facebook</span>
+              <Facebook className="h-8 w-8" />
+            </Link>
+            <Link href="https://x.com/OptimizenWP" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-accent">
+              <span className="sr-only">X (Twitter)</span>
+              <Twitter className="h-8 w-8" />
+            </Link>
+            <Link href="https://www.linkedin.com/in/internetassets/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-accent">
+              <span className="sr-only">LinkedIn</span>
+              <Linkedin className="h-8 w-8" />
+            </Link>
+            <Link href="https://www.instagram.com/localinternetassets/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-accent">
+              <span className="sr-only">Instagram</span>
+              <Instagram className="h-8 w-8" />
+            </Link>
+            <Link href="https://maps.app.goo.gl/c3GhL8V8dcQZjbnj7" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-accent">
+              <span className="sr-only">Google Maps</span>
+              <MapPin className="h-8 w-8" />
+            </Link>
           </div>
         </div>
       </div>
