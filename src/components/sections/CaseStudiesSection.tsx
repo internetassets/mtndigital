@@ -10,7 +10,7 @@ const caseStudies = [
     title: 'White Mountains Solar Boost',
     client: 'Local Solar Panel Installers',
     imageSrc: 'https://www.wmsolaraz.com/wp-content/uploads/2024/02/WHITE-MOUNTAINS-SOLAR-SOLAR-PANELS-SOLAR-KITS-AND-LOCAL-SHOW-LOW-AZ-SOLAR-PANLE-INSTALLERS-928-251-0114-92-845x684.webp',
-    imageAlt: 'White Mountains Solar logo and solar panels',
+    imageAlt: 'White Mountains Solar project image with solar panels',
     imageHint: 'solar project',
     description: 'Implemented a comprehensive SEO strategy to enhance online visibility for a local solar panel installation company, driving targeted traffic and lead generation.',
     result: 'Significant increase in local search rankings and qualified leads.',
@@ -19,15 +19,15 @@ const caseStudies = [
     linkHref: 'https://www.wmsolaraz.com/off-grid-solar/'
   },
   {
-    title: 'Retail E-commerce Expansion',
-    client: 'Online Gear Shop',
-    imageSrc: 'https://picsum.photos/600/400?random=3',
-    imageAlt: 'E-commerce website on a laptop',
-    imageHint: 'ecommerce website',
-    description: 'Developed a new e-commerce platform with enhanced SEO and user experience, leading to a surge in online sales and broader customer reach.',
-    result: 'Tripled website traffic and doubled online sales in 6 months.',
-    keywords: 'e-commerce SEO, online retail marketing, digital store growth',
-    linkText: 'Read Full Case Study',
+    title: 'Sweet Logistics Car Shipping',
+    client: 'Enclosed Car Shipping',
+    imageSrc: 'https://www.sweetlogisticsllc.com/wp-content/uploads/2024/02/5eaf8961d7d621c56d37ffbcb834203a-e1633835850736-836x471x117x0x601x471x1634255180-1.jpg',
+    imageAlt: 'Sweet Logistics car shipping service image',
+    imageHint: 'car transport',
+    description: 'Optimized online presence and lead generation for a nationwide enclosed car shipping company, improving search visibility and customer acquisition.',
+    result: 'Increased organic traffic by 150% and doubled lead conversion rates.',
+    keywords: 'car shipping SEO, enclosed auto transport, logistics marketing',
+    linkText: 'View Sweet Logistics Project',
     linkHref: '#'
   },
   {
@@ -92,3 +92,4 @@ export function CaseStudiesSection() {
     </section>
   );
 }
+

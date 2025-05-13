@@ -22,9 +22,16 @@ const nextConfig: NextConfig = {
         hostname: 'www.wmsolaraz.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.sweetlogisticsllc.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
 };
 
 export default nextConfig;
+
