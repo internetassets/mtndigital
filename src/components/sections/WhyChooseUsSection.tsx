@@ -37,12 +37,12 @@ export function WhyChooseUsSection() {
           </div>
           <div className="order-1 lg:order-2 aspect-w-4 aspect-h-3 lg:aspect-w-1 lg:aspect-h-1 rounded-lg overflow-hidden shadow-2xl">
             <Image
-              src="https://picsum.photos/800/600?random=5"
-              alt="Professional team collaborating in a modern office"
+              src="https://storage.googleapis.com/msgsndr/Gzu2iW2sZuZiVlnRqNtN/media/6823d471e404c66b1068b48f.png"
+              alt="Scenic mountain landscape representing partnership and trust"
               width={800}
               height={600}
               className="object-cover w-full h-full transform transition-transform duration-500 hover:scale-105"
-              data-ai-hint="team meeting office"
+              data-ai-hint="mountain landscape"
             />
           </div>
         </div>
@@ -175,3 +175,4 @@ export function WhyChooseUsSection() {
     </section>
   );
 }
+
