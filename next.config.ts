@@ -34,10 +34,15 @@ const nextConfig: NextConfig = {
         hostname: 'www.wmportablebuildings.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.leadconnectorhq.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
 };
 
 export default nextConfig;
-

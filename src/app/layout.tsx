@@ -18,6 +18,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'Internet Assets | Digital Growth Partner',
   description: 'Your partner for SEO, web design, and online marketing. We help businesses grow their internet assets and achieve online success.',
+  icons: {
+    icon: 'https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/Gzu2iW2sZuZiVlnRqNtN/media/664c46f47068a56568349c0d.png',
+  }
 };
 
 export default function RootLayout({
