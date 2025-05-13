@@ -66,7 +66,7 @@ export function CaseStudiesSection() {
                     alt={study.imageAlt}
                     width={600}
                     height={400}
-                    className="object-contain w-full h-full" 
+                    className="object-cover w-full h-full" 
                     data-ai-hint={study.imageHint}
                   />
                 </div>
