@@ -10,7 +10,7 @@ const caseStudies = [
     title: 'White Mountains Solar Boost',
     client: 'Local Solar Panel Installers',
     imageSrc: 'https://www.wmsolaraz.com/wp-content/uploads/2024/02/WHITE-MOUNTAINS-SOLAR-SOLAR-PANELS-SOLAR-KITS-AND-LOCAL-SHOW-LOW-AZ-SOLAR-PANLE-INSTALLERS-928-251-0114-92-845x684.webp',
-    imageAlt: 'White Mountains Solar project example',
+    imageAlt: 'White Mountains Solar logo and solar panels',
     imageHint: 'solar project',
     description: 'Implemented a comprehensive SEO strategy to enhance online visibility for a local solar panel installation company, driving targeted traffic and lead generation.',
     result: 'Significant increase in local search rankings and qualified leads.',
@@ -75,7 +75,7 @@ export function CaseStudiesSection() {
                 <CardTitle className="text-xl md:text-2xl mb-2">{study.title}</CardTitle>
                 <p className="text-sm text-primary font-medium mb-2">{study.client}</p>
                 <CardDescription className="text-base mb-3">{study.description}</CardDescription>
-                <p className="text-base font-semibold text-accent-foreground bg-accent/20 p-2 rounded-md">{study.result}</p>
+                <p className="text-base font-semibold text-accent-foreground dark:text-foreground bg-accent/20 p-2 rounded-md">{study.result}</p>
                 <p className="mt-3 text-xs text-muted-foreground/80 italic">Keywords: {study.keywords}</p>
               </CardContent>
               <CardFooter className="p-6 pt-0">
