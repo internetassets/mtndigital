@@ -40,6 +40,12 @@ const nextConfig: NextConfig = {
         hostname: 'images.leadconnectorhq.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'storage.googleapis.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
