@@ -7,14 +7,16 @@ import { ArrowRight } from 'lucide-react';
 
 const caseStudies = [
   {
-    title: 'Artisan Cafe SEO Boost',
-    client: 'Local Cafe Business',
-    imageSrc: 'https://picsum.photos/600/400?random=2',
-    imageAlt: 'Cozy interior of a modern cafe',
-    imageHint: 'modern cafe',
-    description: 'Implemented a targeted local SEO strategy and revamped their online profiles, resulting in a significant increase in online visibility and customer engagement.',
-    result: 'Increased online bookings by 40% within 3 months.',
-    keywords: 'cafe SEO services, local restaurant marketing, online food business visibility'
+    title: 'White Mountains Solar Boost',
+    client: 'Local Solar Panel Installers',
+    imageSrc: 'https://www.wmsolaraz.com/wp-content/uploads/2024/02/WHITE-MOUNTAINS-SOLAR-SOLAR-PANELS-SOLAR-KITS-AND-LOCAL-SHOW-LOW-AZ-SOLAR-PANLE-INSTALLERS-928-251-0114-92-845x684.webp',
+    imageAlt: 'White Mountains Solar project example',
+    imageHint: 'solar project',
+    description: 'Implemented a comprehensive SEO strategy to enhance online visibility for a local solar panel installation company, driving targeted traffic and lead generation.',
+    result: 'Significant increase in local search rankings and qualified leads.',
+    keywords: 'solar panel SEO, local solar installers, renewable energy marketing',
+    linkText: 'View White Mountains Solar Project',
+    linkHref: 'https://www.wmsolaraz.com/off-grid-solar/'
   },
   {
     title: 'Retail E-commerce Expansion',
@@ -24,7 +26,9 @@ const caseStudies = [
     imageHint: 'ecommerce website',
     description: 'Developed a new e-commerce platform with enhanced SEO and user experience, leading to a surge in online sales and broader customer reach.',
     result: 'Tripled website traffic and doubled online sales in 6 months.',
-    keywords: 'e-commerce SEO, online retail marketing, digital store growth'
+    keywords: 'e-commerce SEO, online retail marketing, digital store growth',
+    linkText: 'Read Full Case Study',
+    linkHref: '#'
   },
   {
     title: 'Hospitality Website Redesign',
@@ -34,7 +38,9 @@ const caseStudies = [
     imageHint: 'boutique hotel room',
     description: 'Crafted a visually stunning and mobile-friendly website, improving direct bookings and reducing reliance on third-party platforms.',
     result: 'Achieved 60% increase in direct bookings.',
-    keywords: 'hospitality web design, accommodation marketing, direct booking SEO'
+    keywords: 'hospitality web design, accommodation marketing, direct booking SEO',
+    linkText: 'Read Full Case Study',
+    linkHref: '#'
   },
 ];
 
@@ -54,13 +60,13 @@ export function CaseStudiesSection() {
           {caseStudies.map((study) => (
             <Card key={study.title} className="flex flex-col overflow-hidden hover:shadow-2xl transition-shadow duration-300 ease-in-out transform hover:-translate-y-1">
               <CardHeader className="p-0">
-                <div className="aspect-w-16 aspect-h-9">
+                <div className="aspect-w-16 aspect-h-9 bg-muted">
                   <Image
                     src={study.imageSrc}
                     alt={study.imageAlt}
                     width={600}
                     height={400}
-                    className="object-cover w-full h-full"
+                    className="object-contain w-full h-full" 
                     data-ai-hint={study.imageHint}
                   />
                 </div>
@@ -74,8 +80,8 @@ export function CaseStudiesSection() {
               </CardContent>
               <CardFooter className="p-6 pt-0">
                 <Button variant="link" asChild className="p-0 h-auto">
-                  <Link href="#">
-                    Read Full Case Study <ArrowRight className="ml-2 h-4 w-4" />
+                  <Link href={study.linkHref} target={study.linkHref.startsWith('http') ? '_blank' : undefined} rel={study.linkHref.startsWith('http') ? 'noopener noreferrer' : undefined}>
+                    {study.linkText} <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
               </CardFooter>
