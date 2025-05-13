@@ -123,7 +123,7 @@ export function WhyChooseUsSection() {
                 <CardContent className="space-y-3 text-lg">
                   <div className="flex items-center">
                      <Avatar className="h-24 w-24 mr-4">
-                       <AvatarImage src="https://picsum.photos/seed/internet-assets-avatar/200/200" alt="Russ Hunt - Internet Assets Founder" data-ai-hint="cartoon avatar" />
+                       <AvatarImage src="https://storage.googleapis.com/msgsndr/Gzu2iW2sZuZiVlnRqNtN/media/6823d471b44e3c41ed37ded7.jpeg" alt="Russ Hunt - Internet Assets Founder" data-ai-hint="person portrait" />
                        <AvatarFallback>RH</AvatarFallback>
                      </Avatar>
                      <p className="text-xl font-semibold">Russ Hunt, ASU Small Business Graduate</p>
