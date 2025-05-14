@@ -27,13 +27,16 @@ export function ContactCtaSection() {
           />
         </div>
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-          <div className="flex items-start space-x-4 p-6 bg-background/10 rounded-lg">
-            <Phone className="h-8 w-8 text-accent flex-shrink-0 mt-1" />
-            <div>
-              <h3 className="text-xl font-semibold">Call Or Text Us For SEO PPC Or Web Design Ideas</h3>
-              <p className="text-primary-foreground/80">Mon-Fri, 9am-5pm</p>
-              <a href="tel:9288925233" className="hover:underline text-lg">(928) 892-5233</a>
+          <div className="flex flex-col items-start space-y-3 p-6 bg-background/10 rounded-lg">
+            <div className="flex items-start space-x-4">
+                <Phone className="h-8 w-8 text-accent flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-xl font-semibold">Call Or Text Us For SEO, PPC, Or Web Design Ideas</h3>
+                  <p className="text-primary-foreground/80">Mon-Fri, 9am-5pm</p>
+                  <a href="tel:9288925233" className="hover:underline text-lg">(928) 892-5233</a>
+                </div>
             </div>
+            <p className="text-sm italic text-accent/90 mt-auto pt-2">"We make The Phone Ring"</p>
           </div>
           <div className="flex items-start space-x-4 p-6 bg-background/10 rounded-lg">
             <Mail className="h-8 w-8 text-accent flex-shrink-0 mt-1" />
