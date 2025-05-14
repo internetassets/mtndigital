@@ -30,7 +30,7 @@ export function ContactCtaSection() {
           <div className="flex items-start space-x-4 p-6 bg-background/10 rounded-lg">
             <Phone className="h-8 w-8 text-accent flex-shrink-0 mt-1" />
             <div>
-              <h3 className="text-xl font-semibold">Call or Text Us for White Mountains SEO & High-Traffic Digital Marketing</h3>
+              <h3 className="text-xl font-semibold">Call Or Text Us For SEO PPC Or Web Design Ideas</h3>
               <p className="text-primary-foreground/80">Mon-Fri, 9am-5pm</p>
               <a href="tel:9288925233" className="hover:underline text-lg">(928) 892-5233</a>
             </div>
@@ -87,4 +87,3 @@ export function ContactCtaSection() {
     </section>
   );
 }
-
