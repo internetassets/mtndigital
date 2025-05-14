@@ -26,15 +26,15 @@ const generateMockKeywords = (userInput: string): { category: string, keywords: 
         `${primaryInput} agency ${region}`,
       ]
     },
-    {
-      category: "LSI Longtail High Traffic Keywords",
-      keywords: [
-        `how to improve ${primaryInput} for ${mainTopic} in ${region}`,
-        `affordable ${mainTopic} solutions ${region}`,
-        `expert ${primaryInput} consulting for ${mainTopic} in ${region}`,
-        `benefits of professional ${mainTopic} services for ${mainTopic}`,
-      ]
-    },
+    // {
+    //   category: "LSI Longtail High Traffic Keywords",
+    //   keywords: [
+    //     `how to improve ${primaryInput} for ${mainTopic} in ${region}`,
+    //     `affordable ${mainTopic} solutions ${region}`,
+    //     `expert ${primaryInput} consulting for ${mainTopic} in ${region}`,
+    //     `benefits of professional ${mainTopic} services for ${mainTopic}`,
+    //   ]
+    // },
     {
       category: "Non-Competitive High Traffic Keywords",
       keywords: [
