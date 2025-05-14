@@ -20,8 +20,8 @@ const generateMockKeywords = (userInput: string): { category: string, keywords: 
     {
       category: "High Traffic Keywords",
       keywords: [
-        `${mainTopic} services`,
-        `best ${mainTopic}`,
+        `${mainTopic} services ${region}`,
+        `best ${mainTopic} ${region}`,
         `top ${primaryInput} companies ${region}`,
         `${primaryInput} agency ${region}`,
       ]
@@ -29,19 +29,19 @@ const generateMockKeywords = (userInput: string): { category: string, keywords: 
     {
       category: "LSI Longtail High Traffic Keywords",
       keywords: [
-        `how to improve ${primaryInput} for ${mainTopic}`,
+        `how to improve ${primaryInput} for ${mainTopic} in ${region}`,
         `affordable ${mainTopic} solutions ${region}`,
-        `expert ${primaryInput} consulting for ${mainTopic}`,
-        `benefits of professional ${mainTopic} services`,
+        `expert ${primaryInput} consulting for ${mainTopic} in ${region}`,
+        `benefits of professional ${mainTopic} services for ${mainTopic}`,
       ]
     },
     {
       category: "Non-Competitive High Traffic Keywords",
       keywords: [
         `niche ${primaryInput} strategies for ${mainTopic} in ${region}`,
-        `${mainTopic} growth hacks for local businesses`,
+        `${mainTopic} growth hacks for local businesses ${region}`,
         `understanding ${primaryInput} analytics for ${mainTopic}`,
-        `future of ${mainTopic} in ${region}`,
+        `future of ${mainTopic} in ${region} for local businesses`,
       ]
     }
   ];
@@ -49,14 +49,12 @@ const generateMockKeywords = (userInput: string): { category: string, keywords: 
   // Select a few keywords from each category to present
   return categories.map(cat => ({
     ...cat,
-    keywords: cat.keywords.sort(() => 0.5 - Math.random()).slice(0, Math.floor(Math.random() * 2) + 2) // pick 2-3 random keywords
+    keywords: cat.keywords.sort(() => 0.5 - Math.random()).slice(0, Math.floor(Math.random() * 2) + 3) // pick 3-4 random keywords
   })).filter(cat => cat.keywords.length > 0);
 };
 
 
 export function KeywordForm() {
-  const [businessName, setBusinessName] = useState('');
-  const [industry, setIndustry] = useState('');
   const [niche, setNiche] = useState('');
   const [additionalInfo, setAdditionalInfo] = useState('');
   const [keywordCategories, setKeywordCategories] = useState<{ category: string, keywords: string[] }[]>([]);
@@ -65,10 +63,10 @@ export function KeywordForm() {
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (!industry.trim()) {
+    if (!additionalInfo.trim()) {
        toast({
-        title: "Information Required",
-        description: "Please fill in at least the Industry/Business Type field.",
+        title: "Business Details Required",
+        description: "Please describe your business type & key details to generate keyword ideas.",
         variant: "destructive",
       });
       return;
@@ -77,8 +75,8 @@ export function KeywordForm() {
     setIsLoading(true);
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000));
-    const userInput = `${businessName} ${industry} ${niche} ${additionalInfo}`.trim();
-    const generatedKeywords = generateMockKeywords(userInput || industry);
+    const userInput = `${niche} ${additionalInfo}`.trim();
+    const generatedKeywords = generateMockKeywords(userInput || "general business");
     setKeywordCategories(generatedKeywords);
     setIsLoading(false);
     toast({
@@ -95,39 +93,8 @@ export function KeywordForm() {
     <div className="w-full max-w-2xl mx-auto">
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
-          <label htmlFor="businessName" className="block text-sm font-medium text-foreground mb-1">
-            Your Business Name (Optional)
-          </label>
-          <Input
-            id="businessName"
-            type="text"
-            value={businessName}
-            onChange={(e) => setBusinessName(e.target.value)}
-            placeholder="e.g., 'Smith & Co. Photography'"
-            className="w-full text-lg p-3"
-          />
-        </div>
-        <div>
-          <label htmlFor="industry" className="block text-sm font-medium text-foreground mb-1">
-            Your Industry / Business Type
-          </label>
-          <Input
-            id="industry"
-            type="text"
-            value={industry}
-            onChange={(e) => setIndustry(e.target.value)}
-            placeholder="e.g., 'E-commerce Store', 'Local Bakery', 'Tech Startup'"
-            className="w-full text-lg p-3"
-            aria-label="Your Industry or Business Type"
-            required
-          />
-          <p className="mt-2 text-sm text-muted-foreground">
-             Enter a brief description of your business to get keyword ideas for your target audience.
-          </p>
-        </div>
-        <div>
           <label htmlFor="niche" className="block text-sm font-medium text-foreground mb-1">
-            Your Niche (Optional)
+            Specific Niche or Service (Optional)
           </label>
           <Input
             id="niche"
@@ -138,22 +105,26 @@ export function KeywordForm() {
             className="w-full text-lg p-3"
           />
            <p className="mt-2 text-sm text-muted-foreground">
-            Specify your specialization within your industry for more targeted suggestions.
+            Specify a specialization for more targeted suggestions.
           </p>
         </div>
          <div>
           <label htmlFor="additionalInfo" className="block text-sm font-medium text-foreground mb-1">
-            Additional Information (Optional, max 300 characters)
+            Your Business Type & Key Details*
           </label>
           <Textarea 
             id="additionalInfo" 
-            placeholder="e.g., Target audience, specific services, unique selling points" 
+            placeholder="e.g., 'Boutique hotel in Pinetop offering pet-friendly rooms', 'Landscaping service in Show Low specializing in xeriscaping'"
             className="w-full text-lg p-3" 
             maxLength={300}
             value={additionalInfo}
             onChange={handleAdditionalInfoChange}
+            required
+            aria-required="true"
           />
-          <p className="mt-2 text-sm text-muted-foreground">{300 - additionalInfo.length} characters remaining</p>
+          <p className="mt-2 text-sm text-muted-foreground">
+            Describe your business, including its type/industry, main services, and target audience in the White Mountains region. (Max {300 - additionalInfo.length} characters remaining)
+            </p>
          </div>
         <Button type="submit" className="w-full md:w-auto text-lg py-3 px-6" size="lg" disabled={isLoading}>
           {isLoading ? 'Generating Ideas...' : 'Generate Keyword Ideas'}
@@ -166,7 +137,7 @@ export function KeywordForm() {
             <div className="flex items-center mb-6">
               <Lightbulb className="h-8 w-8 text-accent mr-3" />
               <h4 className="text-xl font-semibold text-foreground">
-                 Potential SEO Keyword Categories for <span className="text-primary">{businessName || industry}</span>
+                 Keyword Ideas Based On Your Input
               </h4>
             </div>
             <div className="space-y-6">
@@ -193,3 +164,4 @@ export function KeywordForm() {
     </div>
   );
 }
+
