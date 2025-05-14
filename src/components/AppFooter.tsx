@@ -49,7 +49,7 @@ export function AppFooter() {
               </Link>
             </div>
           </div>
-          <div className="md:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <div className="md:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-8">
             <div className="sm:col-span-1">
               <h3 className="text-sm font-semibold text-foreground tracking-wider uppercase">Solutions</h3>
               <ul role="list" className="mt-4 space-y-2">
@@ -91,7 +91,7 @@ export function AppFooter() {
                 </li>
               </ul>
             </div>
-            <div className="sm:col-span-1">
+            <div className="sm:col-span-2">
               <h3 className="text-sm font-semibold text-foreground tracking-wider uppercase">Our Service Area</h3>
               <div className="mt-4 aspect-w-16 aspect-h-9 rounded-lg overflow-hidden border min-h-[200px] sm:min-h-[250px]">
                 <iframe
