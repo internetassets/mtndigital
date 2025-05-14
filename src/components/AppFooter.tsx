@@ -70,7 +70,7 @@ export function AppFooter() {
             <Link href="https://white-mountains.internet-assets.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary underline">
               White Mountains, Arizona
             </Link>
-            . Contact Russ Hunt at (928) 892-5233 or MARKETING@INTERNET-ASSETS.COM.
+            .
           </p>
         </div>
       </div>
