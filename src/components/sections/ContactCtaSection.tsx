@@ -14,8 +14,8 @@ export function ContactCtaSection() {
         <p className="mt-6 max-w-2xl mx-auto text-lg text-primary-foreground/90">
           Let's discuss how Internet Assets can elevate your online presence. Schedule your free, no-obligation consultation today and take the first step towards digital market leadership.
         </p>
-        <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-          <BookingModal
+        <div className="mt-10">
+           <BookingModal
             trigger={
               <Button
                 size="lg"
@@ -25,14 +25,6 @@ export function ContactCtaSection() {
               </Button>
             }
           />
-           <Link href="https://api.internet-assets.com/widget/form/Aq3viXBASD8ytsd62iin" target="_blank" passHref>
-            <Button
-              size="lg"
-              className="text-lg py-4 px-8 shadow-lg hover:shadow-xl transition-shadow bg-accent text-accent-foreground hover:bg-accent/90"
-            >
-              Submit Business Audit Information
-            </Button>
-          </Link>
         </div>
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
           <div className="flex items-start space-x-4 p-6 bg-background/10 rounded-lg">
@@ -54,7 +46,7 @@ export function ContactCtaSection() {
           <div className="flex items-start space-x-4 p-6 bg-background/10 rounded-lg">
             <MapPin className="h-8 w-8 text-accent flex-shrink-0 mt-1" />
             <div>
-              <h3 className="text-xl font-semibold">Local SEO for White Mountains & Show Low, AZ</h3>
+              <h3 className="text-xl font-semibold">Local Business Website SEO Marketing</h3>
               <p className="text-primary-foreground/80">Serving businesses locally to get more calls, leads and sales.</p>
               <p className="text-lg">White Mountains, AZ & Show Low, AZ</p>
             </div>
