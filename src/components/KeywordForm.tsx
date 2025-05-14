@@ -11,7 +11,6 @@ import { useToast } from '@/hooks/use-toast';
 
 // Updated mock keyword generation logic
 const generateMockKeywords = (nicheInput: string, businessInfoInput: string): { category: string, keywords: string[] }[] => {
-  const region = "White Mountains AZ"; // This is still used for example generation, but not mentioned in UI hint
   const niche = nicheInput.trim();
   const businessInfo = businessInfoInput.trim();
 
@@ -19,49 +18,57 @@ const generateMockKeywords = (nicheInput: string, businessInfoInput: string): { 
   if (niche) {
     mainSubject = niche;
   } else if (businessInfo) {
-    // Try to extract a more specific subject from businessInfo if niche is empty
     const commonBusinessWords = ["services", "company", "agency", "provider", "shop", "store", "business", "in", "for", "and", "the", "with", "llc", "inc", "az", "white", "mountains", "show", "low", "pinetop", "lakeside"];
     const businessWords = businessInfo.toLowerCase().split(' ').filter(word => !commonBusinessWords.includes(word) && word.length > 2);
-    mainSubject = businessWords.slice(0, 2).join(' '); 
+    mainSubject = businessWords.slice(0, 2).join(' ');
     if (!mainSubject) {
-        mainSubject = "local business"; // Fallback if parsing fails to get specific terms
+        mainSubject = "local business"; // Fallback if parsing fails
     }
   } else {
-    mainSubject = "digital marketing"; // Default fallback if both are somehow empty
+    mainSubject = "digital marketing"; // Default fallback
   }
 
+  // Ensure mainSubject is not empty or just whitespace before proceeding
+  if (!mainSubject.trim()) {
+    mainSubject = "keyword ideas"; // A more generic fallback if all else fails
+  }
+
+
   const highTrafficKeywordsList: string[] = [
-    `${mainSubject} ${region}`,
-    `best ${mainSubject} ${region}`,
-    `${mainSubject} services ${region}`,
-    `local ${mainSubject} ${region}`,
-    `${mainSubject} company ${region}`,
+    `${mainSubject}`,
+    `best ${mainSubject}`,
+    `${mainSubject} services`,
+    `local ${mainSubject}`,
+    `${mainSubject} company`,
+    `top ${mainSubject}`,
+    `leading ${mainSubject} provider`,
   ];
 
   const nonCompetitiveKeywordsList: string[] = [
-    `affordable ${mainSubject} ${region}`,
-    `top-rated ${mainSubject} ${region}`,
-    `${mainSubject} near Show Low`, 
-    `${mainSubject} near Pinetop AZ`,
-    `expert ${mainSubject} for small business ${region}`,
-    `custom ${mainSubject} solutions ${region}`,
+    `affordable ${mainSubject}`,
+    `top-rated ${mainSubject}`,
+    `expert ${mainSubject} for small business`,
+    `custom ${mainSubject} solutions`,
+    `reliable ${mainSubject} services`,
+    `results-driven ${mainSubject}`,
   ];
-  
+
   if (niche && businessInfo && businessInfo.split(' ').length > 1) {
-    const specificBusinessAction = businessInfo.split(' ').slice(0,2).join(' '); 
-    nonCompetitiveKeywordsList.push(`${specificBusinessAction} for ${niche} ${region}`);
+    const specificBusinessAction = businessInfo.split(' ').slice(0,2).join(' ');
+    nonCompetitiveKeywordsList.push(`${specificBusinessAction} for ${niche}`);
+    nonCompetitiveKeywordsList.push(`how to find ${mainSubject} for ${niche}`);
   }
 
 
   const pickRandom = (arr: string[], count: number) => {
-    const uniqueArr = Array.from(new Set(arr)); 
+    const uniqueArr = Array.from(new Set(arr));
     const shuffled = [...uniqueArr].sort(() => 0.5 - Math.random());
     return shuffled.slice(0, count);
   }
 
   const finalCategories = [];
 
-  const htKeywords = pickRandom(highTrafficKeywordsList, 3).filter(kw => kw.trim().toLowerCase() !== region.toLowerCase() && kw.replace(mainSubject, "").trim().length > region.length);
+  const htKeywords = pickRandom(highTrafficKeywordsList, 3).filter(kw => kw.trim().toLowerCase() !== mainSubject.toLowerCase() && kw.replace(mainSubject, "").trim().length > 0);
   if (htKeywords.length > 0) {
     finalCategories.push({
       category: "High Traffic Keywords",
@@ -69,14 +76,14 @@ const generateMockKeywords = (nicheInput: string, businessInfoInput: string): { 
     });
   }
 
-  const ncKeywords = pickRandom(nonCompetitiveKeywordsList, 3).filter(kw => kw.trim().toLowerCase() !== region.toLowerCase() && kw.replace(mainSubject, "").trim().length > region.length);
+  const ncKeywords = pickRandom(nonCompetitiveKeywordsList, 3).filter(kw => kw.trim().toLowerCase() !== mainSubject.toLowerCase() && kw.replace(mainSubject, "").trim().length > 0);
    if (ncKeywords.length > 0) {
     finalCategories.push({
       category: "Non-Competitive High Traffic Keywords",
       keywords: ncKeywords,
     });
   }
-  
+
   return finalCategories;
 };
 
@@ -147,10 +154,10 @@ export function KeywordForm() {
           <label htmlFor="additionalInfo" className="block text-sm font-medium text-foreground mb-1">
             Your Business Type & Key Details*
           </label>
-          <Textarea 
-            id="additionalInfo" 
+          <Textarea
+            id="additionalInfo"
             placeholder="e.g., 'Boutique hotel offering pet-friendly rooms', 'Landscaping service specializing in xeriscaping'"
-            className="w-full text-lg p-3" 
+            className="w-full text-lg p-3"
             maxLength={300}
             value={additionalInfo}
             onChange={handleAdditionalInfoChange}
@@ -192,7 +199,7 @@ export function KeywordForm() {
               ))}
             </div>
             <p className="mt-8 text-sm text-muted-foreground">
-              <strong>Note:</strong> These are AI-generated examples to illustrate different keyword types. 
+              <strong>Note:</strong> These are AI-generated examples to illustrate different keyword types.
               For a comprehensive SEO strategy, including in-depth keyword research, competitor analysis, and content planning tailored to your business, please contact us for a consultation.
             </p>
           </CardContent>
