@@ -67,12 +67,21 @@ export function AppFooter() {
                  <li><Link href="#why-us" className="text-sm text-muted-foreground hover:text-primary">Why Choose Us</Link></li>
               </ul>
             </div>
-             <div>
-              <h3 className="text-sm font-semibold text-foreground tracking-wider uppercase">Legal</h3>
-              <ul role="list" className="mt-4 space-y-2">
-                <li><Link href="#" className="text-sm text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
-                <li><Link href="#" className="text-sm text-muted-foreground hover:text-primary">Terms of Service</Link></li>
-              </ul>
+            <div>
+              <h3 className="text-sm font-semibold text-foreground tracking-wider uppercase">Our Service Area</h3>
+              <div className="mt-4 aspect-w-4 aspect-h-3 rounded-lg overflow-hidden border">
+                <iframe
+                  src="https://www.google.com/maps/d/u/4/embed?mid=1a5c0ucUJhT7I4TFp3cS-3hAg3X4&ehbc=2E312F"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen={false}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Internet Assets Service Area Map"
+                  className="absolute inset-0 w-full h-full"
+                ></iframe>
+              </div>
             </div>
           </div>
         </div>
@@ -89,3 +98,4 @@ export function AppFooter() {
     </footer>
   );
 }
+
