@@ -1,10 +1,20 @@
 
+"use client";
+
 import Link from 'next/link';
 import { Logo } from '@/components/Logo';
 import { Facebook, Linkedin, Twitter, Instagram, MapPin, Phone, Mail, Search, MonitorSmartphone, PenTool, Lightbulb, Briefcase, ThumbsUp } from 'lucide-react';
+import { useState, useEffect, type ReactNode } from 'react';
 
 export function AppFooter() {
-  const currentYear = new Date().getFullYear();
+  const [currentYear, setCurrentYear] = useState<number | null>(null);
+
+  useEffect(() => {
+    setCurrentYear(new Date().getFullYear());
+  }, []);
+
+  const copyrightText = currentYear !== null ? `© ${currentYear} Internet Assets. All rights reserved.` : `© Internet Assets. All rights reserved.`;
+
   return (
     <footer className="border-t bg-muted/40">
       <div className="container mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
@@ -111,7 +121,7 @@ export function AppFooter() {
         </div>
         <div className="mt-12 border-t border-border pt-8">
           <p className="text-sm text-muted-foreground text-center">
-            &copy; {currentYear} Internet Assets. All rights reserved.{' '}
+            {copyrightText}{' '}
             <Link href="https://white-mountains.internet-assets.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary underline">
               White Mountains, Arizona
             </Link>
@@ -122,4 +132,3 @@ export function AppFooter() {
     </footer>
   );
 }
-

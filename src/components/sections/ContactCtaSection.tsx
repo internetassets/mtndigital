@@ -6,7 +6,7 @@ import { BookingModal } from '@/components/BookingModal';
 
 export function ContactCtaSection() {
   return (
-    <section id="contact" className="py-16 md:py-24 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground">
+    <section id="contact" className="py-16 md:py-24 bg-blue-600 text-white">
       <div className="container mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
           Ready to Grow Your Internet Assets?
@@ -14,22 +14,30 @@ export function ContactCtaSection() {
         <p className="mt-6 max-w-2xl mx-auto text-lg text-primary-foreground/90">
           Let's discuss how Internet Assets can elevate your online presence. Schedule your free, no-obligation consultation today and take the first step towards digital market leadership.
         </p>
-        <div className="mt-10">
+        <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
           <BookingModal
             trigger={
               <Button
                 size="lg"
-                variant="secondary"
-                className="text-lg py-4 px-8 shadow-lg hover:shadow-xl transition-shadow bg-accent text-accent-foreground hover:bg-accent/90"
+                className="text-lg py-4 px-8 shadow-lg hover:shadow-xl transition-shadow bg-yellow-500 text-blue-900 hover:bg-yellow-600"
               >
                 Schedule Free Consultation
               </Button>
             }
           />
+          <Link href="https://api.internet-assets.com/widget/form/Aq3viXBASD8ytsd62iin" target="_blank" passHref>
+            <Button
+              size="lg"
+              className="text-lg py-4 px-8 shadow-lg hover:shadow-xl transition-shadow bg-yellow-500 text-blue-900 hover:bg-yellow-600"
+            >
+              Submit Business Audit Information
+            </Button>
+          </Link>
         </div>
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-          <div className="flex items-start space-x-4 p-6 bg-background/10 rounded-lg">
-            <Phone className="h-8 w-8 text-accent flex-shrink-0 mt-1" />
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-left text-white">
+          <div className="flex items-start space-x-4 p-6 bg-blue-700 rounded-lg">
+
+            <Phone className="h-8 w-8 text-yellow-500 flex-shrink-0 mt-1" />
             <div>
               <h3 className="text-xl font-semibold">Call or Text Us</h3>
               <p className="text-primary-foreground/80">Mon-Fri, 9am-5pm</p>
@@ -37,7 +45,7 @@ export function ContactCtaSection() {
             </div>
           </div>
           <div className="flex items-start space-x-4 p-6 bg-background/10 rounded-lg">
-            <Mail className="h-8 w-8 text-accent flex-shrink-0 mt-1" />
+            <Mail className="h-8 w-8 text-yellow-500 flex-shrink-0 mt-1" />
             <div>
               <h3 className="text-xl font-semibold">Email Us</h3>
               <p className="text-primary-foreground/80">Get a response within 24 hours</p>
@@ -45,7 +53,7 @@ export function ContactCtaSection() {
             </div>
           </div>
           <div className="flex items-start space-x-4 p-6 bg-background/10 rounded-lg">
-            <MapPin className="h-8 w-8 text-accent flex-shrink-0 mt-1" />
+            <MapPin className="h-8 w-8 text-yellow-500 flex-shrink-0 mt-1" />
             <div>
               <h3 className="text-xl font-semibold">Our Reach</h3>
               <p className="text-primary-foreground/80">Serving businesses locally to get more calls, leads and sales.</p>
@@ -55,24 +63,24 @@ export function ContactCtaSection() {
         </div>
         <div className="mt-12 pt-8 border-t border-primary-foreground/20">
           <h3 className="text-xl font-semibold mb-6">Connect With Us</h3>
-          <div className="flex justify-center space-x-6">
-            <Link href="https://www.facebook.com/internetassets" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-accent">
+          <div className="flex justify-center space-x-6 text-white">
+            <Link href="https://www.facebook.com/internetassets" target="_blank" rel="noopener noreferrer" className=" hover:text-yellow-500">
               <span className="sr-only">Facebook</span>
               <Facebook className="h-8 w-8" />
             </Link>
-            <Link href="https://x.com/OptimizenWP" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-accent">
+            <Link href="https://x.com/OptimizenWP" target="_blank" rel="noopener noreferrer" className=" hover:text-yellow-500">
               <span className="sr-only">X (Twitter)</span>
               <Twitter className="h-8 w-8" />
             </Link>
-            <Link href="https://www.linkedin.com/in/internetassets/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-accent">
+            <Link href="https://www.linkedin.com/in/internetassets/" target="_blank" rel="noopener noreferrer" className=" hover:text-yellow-500">
               <span className="sr-only">LinkedIn</span>
               <Linkedin className="h-8 w-8" />
             </Link>
-            <Link href="https://www.instagram.com/localinternetassets/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-accent">
+            <Link href="https://www.instagram.com/localinternetassets/" target="_blank" rel="noopener noreferrer" className=" hover:text-yellow-500">
               <span className="sr-only">Instagram</span>
               <Instagram className="h-8 w-8" />
             </Link>
-            <Link href="https://maps.app.goo.gl/c3GhL8V8dcQZjbnj7" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-accent">
+            <Link href="https://maps.app.goo.gl/c3GhL8V8dcQZjbnj7" target="_blank" rel="noopener noreferrer" className=" hover:text-yellow-500">
               <span className="sr-only">Google Maps</span>
               <MapPin className="h-8 w-8" />
             </Link>
