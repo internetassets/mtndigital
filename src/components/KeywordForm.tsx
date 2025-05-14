@@ -10,47 +10,74 @@ import { Lightbulb } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 // Updated mock keyword generation logic
-const generateMockKeywords = (userInput: string): { category: string, keywords: string[] }[] => {
-  const inputParts = userInput.toLowerCase().split(" ").filter(word => word.length > 2);
-  const mainTopic = inputParts.length > 0 ? inputParts.join(" ") : "your business";
-  const primaryInput = inputParts.length > 0 ? inputParts[0] : "digital marketing";
-  const region = "White Mountains AZ"; // Assuming a default region for local context
+const generateMockKeywords = (nicheInput: string, businessInfoInput: string): { category: string, keywords: string[] }[] => {
+  const region = "White Mountains AZ";
+  const niche = nicheInput.trim();
+  const businessInfo = businessInfoInput.trim();
 
-  const categories = [
-    {
-      category: "High Traffic Keywords",
-      keywords: [
-        `${mainTopic} services ${region}`,
-        `best ${mainTopic} ${region}`,
-        `top ${primaryInput} companies ${region}`,
-        `${primaryInput} agency ${region}`,
-      ]
-    },
-    // {
-    //   category: "LSI Longtail High Traffic Keywords",
-    //   keywords: [
-    //     `how to improve ${primaryInput} for ${mainTopic} in ${region}`,
-    //     `affordable ${mainTopic} solutions ${region}`,
-    //     `expert ${primaryInput} consulting for ${mainTopic} in ${region}`,
-    //     `benefits of professional ${mainTopic} services for ${mainTopic}`,
-    //   ]
-    // },
-    {
-      category: "Non-Competitive High Traffic Keywords",
-      keywords: [
-        `niche ${primaryInput} strategies for ${mainTopic} in ${region}`,
-        `${mainTopic} growth hacks for local businesses ${region}`,
-        `understanding ${primaryInput} analytics for ${mainTopic}`,
-        `future of ${mainTopic} in ${region} for local businesses`,
-      ]
+  let mainSubject = "";
+  if (niche) {
+    mainSubject = niche;
+  } else if (businessInfo) {
+    // Try to extract a more specific subject from businessInfo if niche is empty
+    const commonBusinessWords = ["services", "company", "agency", "provider", "shop", "store", "business", "in", "for", "and", "the", "with", "llc", "inc", "az", "white", "mountains", "show", "low", "pinetop", "lakeside"];
+    const businessWords = businessInfo.toLowerCase().split(' ').filter(word => !commonBusinessWords.includes(word) && word.length > 2);
+    mainSubject = businessWords.slice(0, 2).join(' '); 
+    if (!mainSubject) {
+        mainSubject = "local business"; // Fallback if parsing fails to get specific terms
     }
+  } else {
+    mainSubject = "digital marketing"; // Default fallback if both are somehow empty
+  }
+
+  const highTrafficKeywordsList: string[] = [
+    `${mainSubject} ${region}`,
+    `best ${mainSubject} ${region}`,
+    `${mainSubject} services ${region}`,
+    `local ${mainSubject} ${region}`,
+    `${mainSubject} company ${region}`,
   ];
 
-  // Select a few keywords from each category to present
-  return categories.map(cat => ({
-    ...cat,
-    keywords: cat.keywords.sort(() => 0.5 - Math.random()).slice(0, Math.floor(Math.random() * 2) + 3) // pick 3-4 random keywords
-  })).filter(cat => cat.keywords.length > 0);
+  const nonCompetitiveKeywordsList: string[] = [
+    `affordable ${mainSubject} ${region}`,
+    `top-rated ${mainSubject} ${region}`,
+    `${mainSubject} near Show Low`, 
+    `${mainSubject} near Pinetop AZ`,
+    `expert ${mainSubject} for small business ${region}`,
+    `custom ${mainSubject} solutions ${region}`,
+  ];
+  
+  if (niche && businessInfo && businessInfo.split(' ').length > 1) {
+    const specificBusinessAction = businessInfo.split(' ').slice(0,2).join(' '); 
+    nonCompetitiveKeywordsList.push(`${specificBusinessAction} for ${niche} ${region}`);
+  }
+
+
+  const pickRandom = (arr: string[], count: number) => {
+    const uniqueArr = Array.from(new Set(arr)); 
+    const shuffled = [...uniqueArr].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, count);
+  }
+
+  const finalCategories = [];
+
+  const htKeywords = pickRandom(highTrafficKeywordsList, 3).filter(kw => kw.trim().toLowerCase() !== region.toLowerCase() && kw.replace(mainSubject, "").trim().length > region.length);
+  if (htKeywords.length > 0) {
+    finalCategories.push({
+      category: "High Traffic Keywords",
+      keywords: htKeywords,
+    });
+  }
+
+  const ncKeywords = pickRandom(nonCompetitiveKeywordsList, 3).filter(kw => kw.trim().toLowerCase() !== region.toLowerCase() && kw.replace(mainSubject, "").trim().length > region.length);
+   if (ncKeywords.length > 0) {
+    finalCategories.push({
+      category: "Non-Competitive High Traffic Keywords",
+      keywords: ncKeywords,
+    });
+  }
+  
+  return finalCategories;
 };
 
 
@@ -75,14 +102,22 @@ export function KeywordForm() {
     setIsLoading(true);
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000));
-    const userInput = `${niche} ${additionalInfo}`.trim();
-    const generatedKeywords = generateMockKeywords(userInput || "general business");
+    const generatedKeywords = generateMockKeywords(niche, additionalInfo);
     setKeywordCategories(generatedKeywords);
     setIsLoading(false);
-    toast({
-      title: "Keyword Ideas Generated!",
-      description: "Here are some example keyword categories for your business.",
-    });
+
+    if (generatedKeywords.length > 0 && generatedKeywords.some(cat => cat.keywords.length > 0)) {
+        toast({
+        title: "Keyword Ideas Generated!",
+        description: "Here are some example keyword categories for your business.",
+        });
+    } else {
+        toast({
+        title: "Could Not Generate Keywords",
+        description: "Please try refining your input for more specific keyword ideas.",
+        variant: "destructive"
+        });
+    }
   };
 
   const handleAdditionalInfoChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -131,7 +166,7 @@ export function KeywordForm() {
         </Button>
       </form>
 
-      {keywordCategories.length > 0 && (
+      {keywordCategories.length > 0 && keywordCategories.some(cat => cat.keywords.length > 0) && (
         <Card className="mt-10 shadow-lg">
           <CardContent className="p-6">
             <div className="flex items-center mb-6">
@@ -142,6 +177,7 @@ export function KeywordForm() {
             </div>
             <div className="space-y-6">
               {keywordCategories.map((category, index) => (
+                category.keywords.length > 0 && (
                 <div key={index}>
                   <h5 className="text-lg font-semibold text-primary mb-2">{category.category}:</h5>
                   <ul className="space-y-2 list-disc list-inside pl-4">
@@ -152,6 +188,7 @@ export function KeywordForm() {
                     ))}
                   </ul>
                 </div>
+                )
               ))}
             </div>
             <p className="mt-8 text-sm text-muted-foreground">
@@ -164,4 +201,3 @@ export function KeywordForm() {
     </div>
   );
 }
-
