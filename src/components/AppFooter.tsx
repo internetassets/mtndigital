@@ -8,8 +8,8 @@ export function AppFooter() {
   return (
     <footer className="border-t bg-muted/40">
       <div className="container mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          <div>
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-12">
+          <div className="md:col-span-2">
             <Logo />
             <p className="mt-4 text-sm text-muted-foreground">
               Elevating businesses in White Mountains, AZ &amp; Show Low, AZ with expert digital marketing strategies and asset growth for 15 years.
@@ -49,51 +49,51 @@ export function AppFooter() {
               </Link>
             </div>
           </div>
-          <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-8">
-            <div>
+          <div className="md:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-8">
+            <div className="sm:col-span-1">
               <h3 className="text-sm font-semibold text-foreground tracking-wider uppercase">Solutions</h3>
               <ul role="list" className="mt-4 space-y-2">
                 <li>
-                  <Link href="#services" className="inline-flex items-center text-sm text-muted-foreground hover:text-primary">
-                    <Search className="mr-2 h-4 w-4 text-primary/80" />
+                  <Link href="#services" className="inline-flex items-center text-sm text-muted-foreground hover:text-primary py-1">
+                    <Search className="mr-3 h-4 w-4 text-primary/80" />
                     SEO Services
                   </Link>
                 </li>
                 <li>
-                  <Link href="#services" className="inline-flex items-center text-sm text-muted-foreground hover:text-primary">
-                    <MonitorSmartphone className="mr-2 h-4 w-4 text-primary/80" />
+                  <Link href="#services" className="inline-flex items-center text-sm text-muted-foreground hover:text-primary py-1">
+                    <MonitorSmartphone className="mr-3 h-4 w-4 text-primary/80" />
                     Web Design
                   </Link>
                 </li>
                 <li>
-                  <Link href="#services" className="inline-flex items-center text-sm text-muted-foreground hover:text-primary">
-                    <PenTool className="mr-2 h-4 w-4 text-primary/80" />
+                  <Link href="#services" className="inline-flex items-center text-sm text-muted-foreground hover:text-primary py-1">
+                    <PenTool className="mr-3 h-4 w-4 text-primary/80" />
                     Content Marketing
                   </Link>
                 </li>
                 <li>
-                  <Link href="#keyword-tool" className="inline-flex items-center text-sm text-muted-foreground hover:text-primary">
-                    <Lightbulb className="mr-2 h-4 w-4 text-primary/80" />
+                  <Link href="#keyword-tool" className="inline-flex items-center text-sm text-muted-foreground hover:text-primary py-1">
+                    <Lightbulb className="mr-3 h-4 w-4 text-primary/80" />
                     Keyword Tool
                   </Link>
                 </li>
                 <li>
-                  <Link href="#case-studies" className="inline-flex items-center text-sm text-muted-foreground hover:text-primary">
-                    <Briefcase className="mr-2 h-4 w-4 text-primary/80" />
+                  <Link href="#case-studies" className="inline-flex items-center text-sm text-muted-foreground hover:text-primary py-1">
+                    <Briefcase className="mr-3 h-4 w-4 text-primary/80" />
                     Case Studies
                   </Link>
                 </li>
                  <li>
-                  <Link href="#why-us" className="inline-flex items-center text-sm text-muted-foreground hover:text-primary">
-                    <ThumbsUp className="mr-2 h-4 w-4 text-primary/80" />
+                  <Link href="#why-us" className="inline-flex items-center text-sm text-muted-foreground hover:text-primary py-1">
+                    <ThumbsUp className="mr-3 h-4 w-4 text-primary/80" />
                     Why Choose Us
                   </Link>
                 </li>
               </ul>
             </div>
-            <div>
+            <div className="sm:col-span-1">
               <h3 className="text-sm font-semibold text-foreground tracking-wider uppercase">Our Service Area</h3>
-              <div className="mt-4 aspect-w-4 aspect-h-3 rounded-lg overflow-hidden border">
+              <div className="mt-4 aspect-w-16 aspect-h-9 rounded-lg overflow-hidden border min-h-[200px] sm:min-h-[250px]">
                 <iframe
                   src="https://www.google.com/maps/d/u/4/embed?mid=1a5c0ucUJhT7I4TFp3cS-3hAg3X4&ehbc=2E312F"
                   width="100%"
