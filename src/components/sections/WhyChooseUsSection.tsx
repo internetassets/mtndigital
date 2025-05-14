@@ -37,12 +37,14 @@ export function WhyChooseUsSection() {
           </div>
           <div className="order-1 lg:order-2 aspect-w-4 aspect-h-3 lg:aspect-w-1 lg:aspect-h-1 rounded-lg overflow-hidden shadow-2xl">
             <Image
-              src="https://storage.googleapis.com/msgsndr/Gzu2iW2sZuZiVlnRqNtN/media/6823d471e404c66b1068b48f.png"
+              src="https://storage.googleapis.com/msgsndr/Gzu2iW2sZuZiVlnRqNtN/media/6823d47175cc4686c35fee37.jpeg"
               alt="Scenic mountain landscape representing partnership and trust"
               width={800}
               height={600}
               className="object-cover w-full h-full transform transition-transform duration-500 hover:scale-105"
               data-ai-hint="mountain landscape"
+              loading="lazy"
+              sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 1023px) calc(100vw - 48px), 576px"
             />
           </div>
         </div>
