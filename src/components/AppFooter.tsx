@@ -1,7 +1,7 @@
 
 import Link from 'next/link';
 import { Logo } from '@/components/Logo';
-import { Facebook, Linkedin, Twitter, Instagram, MapPin, Phone, Mail } from 'lucide-react';
+import { Facebook, Linkedin, Twitter, Instagram, MapPin, Phone, Mail, Search, MonitorSmartphone, PenTool, Lightbulb, Briefcase, ThumbsUp } from 'lucide-react';
 
 export function AppFooter() {
   const currentYear = new Date().getFullYear();
@@ -49,22 +49,46 @@ export function AppFooter() {
               </Link>
             </div>
           </div>
-          <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-3 gap-8">
+          <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-8">
             <div>
               <h3 className="text-sm font-semibold text-foreground tracking-wider uppercase">Solutions</h3>
               <ul role="list" className="mt-4 space-y-2">
-                <li><Link href="#services" className="text-sm text-muted-foreground hover:text-primary">SEO Services</Link></li>
-                <li><Link href="#services" className="text-sm text-muted-foreground hover:text-primary">Web Design</Link></li>
-                <li><Link href="#services" className="text-sm text-muted-foreground hover:text-primary">Content Marketing</Link></li>
-                <li><Link href="#keyword-tool" className="text-sm text-muted-foreground hover:text-primary">Keyword Tool</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-sm font-semibold text-foreground tracking-wider uppercase">Company</h3>
-              <ul role="list" className="mt-4 space-y-2">
-                <li><Link href="#case-studies" className="text-sm text-muted-foreground hover:text-primary">Case Studies</Link></li>
-                <li><Link href="#contact" className="text-sm text-muted-foreground hover:text-primary">Contact</Link></li>
-                 <li><Link href="#why-us" className="text-sm text-muted-foreground hover:text-primary">Why Choose Us</Link></li>
+                <li>
+                  <Link href="#services" className="inline-flex items-center text-sm text-muted-foreground hover:text-primary">
+                    <Search className="mr-2 h-4 w-4 text-primary/80" />
+                    SEO Services
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#services" className="inline-flex items-center text-sm text-muted-foreground hover:text-primary">
+                    <MonitorSmartphone className="mr-2 h-4 w-4 text-primary/80" />
+                    Web Design
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#services" className="inline-flex items-center text-sm text-muted-foreground hover:text-primary">
+                    <PenTool className="mr-2 h-4 w-4 text-primary/80" />
+                    Content Marketing
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#keyword-tool" className="inline-flex items-center text-sm text-muted-foreground hover:text-primary">
+                    <Lightbulb className="mr-2 h-4 w-4 text-primary/80" />
+                    Keyword Tool
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#case-studies" className="inline-flex items-center text-sm text-muted-foreground hover:text-primary">
+                    <Briefcase className="mr-2 h-4 w-4 text-primary/80" />
+                    Case Studies
+                  </Link>
+                </li>
+                 <li>
+                  <Link href="#why-us" className="inline-flex items-center text-sm text-muted-foreground hover:text-primary">
+                    <ThumbsUp className="mr-2 h-4 w-4 text-primary/80" />
+                    Why Choose Us
+                  </Link>
+                </li>
               </ul>
             </div>
             <div>
