@@ -54,7 +54,7 @@ export function ContactCtaSection() {
           <div className="flex items-start space-x-4 p-6 bg-background/10 rounded-lg">
             <MapPin className="h-8 w-8 text-accent flex-shrink-0 mt-1" />
             <div>
-              <h3 className="text-xl font-semibold">Our Reach: Local SEO & Non-Competitive Keyword Strategies for White Mountains & Show Low AZ</h3>
+              <h3 className="text-xl font-semibold">Local SEO for White Mountains & Show Low, AZ</h3>
               <p className="text-primary-foreground/80">Serving businesses locally to get more calls, leads and sales.</p>
               <p className="text-lg">White Mountains, AZ & Show Low, AZ</p>
             </div>
@@ -95,3 +95,4 @@ export function ContactCtaSection() {
     </section>
   );
 }
+
