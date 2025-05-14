@@ -6,7 +6,7 @@ import { BookingModal } from '@/components/BookingModal';
 
 export function ContactCtaSection() {
   return (
-    <section id="contact" className="py-16 md:py-24 bg-primary text-primary-foreground">
+    <section id="contact" className="py-16 md:py-24 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground">
       <div className="container mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
           Ready for Top SEO & High-Traffic Results in White Mountains? Grow Your Internet Assets!
@@ -36,7 +36,7 @@ export function ContactCtaSection() {
                   <a href="tel:9288925233" className="hover:underline text-lg">(928) 892-5233</a>
                 </div>
             </div>
-            <p className="text-sm italic text-accent/90 mt-auto pt-2">"We make The Phone Ring"</p>
+            <p className="text-base italic text-accent/90 mt-auto pt-2">"We Make The Phone Ring"</p>
           </div>
           <div className="flex items-start space-x-4 p-6 bg-background/10 rounded-lg">
             <Mail className="h-8 w-8 text-accent flex-shrink-0 mt-1" />
