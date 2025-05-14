@@ -1,43 +1,55 @@
 
 import Link from 'next/link';
 import { Logo } from '@/components/Logo';
-import { Facebook, Linkedin, Twitter, Instagram, MapPin } from 'lucide-react';
+import { Facebook, Linkedin, Twitter, Instagram, MapPin, Phone, Mail } from 'lucide-react';
 
 export function AppFooter() {
   const currentYear = new Date().getFullYear();
   return (
     <footer className="border-t bg-muted/40">
       <div className="container mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
             <Logo />
             <p className="mt-4 text-sm text-muted-foreground">
               Elevating businesses in White Mountains, AZ &amp; Show Low, AZ with expert digital marketing strategies and asset growth for 15 years.
             </p>
+            <div className="mt-6 space-y-3">
+              <h4 className="text-xs font-semibold text-foreground tracking-wider uppercase">Contact Us</h4>
+              <ul className="space-y-2">
+                <li className="flex items-center text-sm text-muted-foreground">
+                  <Phone className="mr-3 h-4 w-4 flex-shrink-0 text-primary" />
+                  <a href="tel:9288925233" className="hover:text-primary">(928) 892-5233</a>
+                </li>
+                <li className="flex items-center text-sm text-muted-foreground">
+                  <Mail className="mr-3 h-4 w-4 flex-shrink-0 text-primary" />
+                  <a href="mailto:MARKETING@INTERNET-ASSETS.COM" className="hover:text-primary break-all">MARKETING@INTERNET-ASSETS.COM</a>
+                </li>
+                 <li className="flex items-center text-sm text-muted-foreground">
+                  <MapPin className="mr-3 h-4 w-4 flex-shrink-0 text-primary" />
+                  <span>White Mountains, AZ &amp; Show Low, AZ</span>
+                </li>
+              </ul>
+            </div>
             <div className="mt-6 flex space-x-4">
-              <Link href="https://www.facebook.com/internetassets" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
-                <span className="sr-only">Facebook</span>
+              <Link href="https://www.facebook.com/internetassets" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary" aria-label="Facebook">
                 <Facebook className="h-6 w-6" />
               </Link>
-              <Link href="https://x.com/OptimizenWP" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
-                <span className="sr-only">X (Twitter)</span>
+              <Link href="https://x.com/OptimizenWP" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary" aria-label="X (Twitter)">
                 <Twitter className="h-6 w-6" />
               </Link>
-              <Link href="https://www.linkedin.com/in/internetassets/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
-                <span className="sr-only">LinkedIn</span>
+              <Link href="https://www.linkedin.com/in/internetassets/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary" aria-label="LinkedIn">
                 <Linkedin className="h-6 w-6" />
               </Link>
-              <Link href="https://www.instagram.com/localinternetassets/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
-                <span className="sr-only">Instagram</span>
+              <Link href="https://www.instagram.com/localinternetassets/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary" aria-label="Instagram">
                 <Instagram className="h-6 w-6" />
               </Link>
-              <Link href="https://maps.app.goo.gl/c3GhL8V8dcQZjbnj7" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
-                <span className="sr-only">Google Maps</span>
+              <Link href="https://maps.app.goo.gl/c3GhL8V8dcQZjbnj7" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary" aria-label="Google Maps">
                 <MapPin className="h-6 w-6" />
               </Link>
             </div>
           </div>
-          <div className="md:col-span-2 grid grid-cols-2 sm:grid-cols-3 gap-8">
+          <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-3 gap-8">
             <div>
               <h3 className="text-sm font-semibold text-foreground tracking-wider uppercase">Solutions</h3>
               <ul role="list" className="mt-4 space-y-2">
