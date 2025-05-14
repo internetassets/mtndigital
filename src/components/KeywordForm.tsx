@@ -18,7 +18,7 @@ const generateMockKeywords = (nicheInput: string, businessInfoInput: string): { 
   if (niche) {
     mainSubject = niche;
   } else if (businessInfo) {
-    const commonBusinessWords = ["services", "company", "agency", "provider", "shop", "store", "business", "in", "for", "and", "the", "with", "llc", "inc", "az", "white", "mountains", "show", "low", "pinetop", "lakeside"];
+    const commonBusinessWords = ["services", "company", "agency", "provider", "shop", "store", "business", "in", "for", "and", "the", "with", "llc", "inc"];
     const businessWords = businessInfo.toLowerCase().split(' ').filter(word => !commonBusinessWords.includes(word) && word.length > 2);
     mainSubject = businessWords.slice(0, 2).join(' ');
     if (!mainSubject) {
@@ -42,7 +42,22 @@ const generateMockKeywords = (nicheInput: string, businessInfoInput: string): { 
     `${mainSubject} company`,
     `top ${mainSubject}`,
     `leading ${mainSubject} provider`,
+    `${mainSubject} solutions`,
+    `find ${mainSubject}`,
   ];
+
+  const lsiHighTrafficKeywordsList: string[] = [
+    `${mainSubject} benefits`,
+    `types of ${mainSubject}`,
+    `how to choose ${mainSubject}`,
+    `${mainSubject} for beginners`,
+    `${mainSubject} trends`,
+    `compare ${mainSubject}`,
+    `${mainSubject} alternatives`,
+    `${mainSubject} pricing`,
+    `understanding ${mainSubject}`,
+  ];
+
 
   const nonCompetitiveKeywordsList: string[] = [
     `affordable ${mainSubject}`,
@@ -51,24 +66,33 @@ const generateMockKeywords = (nicheInput: string, businessInfoInput: string): { 
     `custom ${mainSubject} solutions`,
     `reliable ${mainSubject} services`,
     `results-driven ${mainSubject}`,
+    `niche ${mainSubject} provider`,
+    `specialized ${mainSubject}`,
   ];
 
   if (niche && businessInfo && businessInfo.split(' ').length > 1) {
     const specificBusinessAction = businessInfo.split(' ').slice(0,2).join(' ');
     nonCompetitiveKeywordsList.push(`${specificBusinessAction} for ${niche}`);
     nonCompetitiveKeywordsList.push(`how to find ${mainSubject} for ${niche}`);
+    lsiHighTrafficKeywordsList.push(`${mainSubject} for ${specificBusinessAction.split(' ')[0]}`); // Add a niche-specific LSI keyword
   }
 
 
   const pickRandom = (arr: string[], count: number) => {
-    const uniqueArr = Array.from(new Set(arr));
+    const uniqueArr = Array.from(new Set(arr)); // Ensure unique keywords before picking
     const shuffled = [...uniqueArr].sort(() => 0.5 - Math.random());
     return shuffled.slice(0, count);
   }
 
   const finalCategories = [];
 
-  const htKeywords = pickRandom(highTrafficKeywordsList, 3).filter(kw => kw.trim().toLowerCase() !== mainSubject.toLowerCase() && kw.replace(mainSubject, "").trim().length > 0);
+  // Filter out keywords that are just the mainSubject or too short after removing mainSubject
+  const filterKeywords = (keywords: string[], subject: string) => {
+    return keywords.filter(kw => kw.trim().toLowerCase() !== subject.toLowerCase() && kw.replace(subject, "").trim().length > 1);
+  }
+
+  const htKeywordsRaw = pickRandom(highTrafficKeywordsList, 3);
+  const htKeywords = filterKeywords(htKeywordsRaw, mainSubject);
   if (htKeywords.length > 0) {
     finalCategories.push({
       category: "High Traffic Keywords",
@@ -76,13 +100,32 @@ const generateMockKeywords = (nicheInput: string, businessInfoInput: string): { 
     });
   }
 
-  const ncKeywords = pickRandom(nonCompetitiveKeywordsList, 3).filter(kw => kw.trim().toLowerCase() !== mainSubject.toLowerCase() && kw.replace(mainSubject, "").trim().length > 0);
+  const lsiKeywordsRaw = pickRandom(lsiHighTrafficKeywordsList, 3);
+  const lsiKeywords = filterKeywords(lsiKeywordsRaw, mainSubject);
+  if (lsiKeywords.length > 0) {
+    finalCategories.push({
+      category: "LSI High Traffic Keywords",
+      keywords: lsiKeywords,
+    });
+  }
+
+  const ncKeywordsRaw = pickRandom(nonCompetitiveKeywordsList, 3);
+  const ncKeywords = filterKeywords(ncKeywordsRaw, mainSubject);
    if (ncKeywords.length > 0) {
     finalCategories.push({
       category: "Non-Competitive High Traffic Keywords",
       keywords: ncKeywords,
     });
   }
+
+  // If no keywords were generated for any category (e.g., mainSubject was too generic), add a fallback
+  if (finalCategories.every(cat => cat.keywords.length === 0)) {
+    finalCategories.push({
+        category: "Example Keywords",
+        keywords: [`best ${mainSubject} services`, `affordable ${mainSubject}`, `learn about ${mainSubject}`]
+    })
+  }
+
 
   return finalCategories;
 };
