@@ -11,7 +11,7 @@ import { useToast } from '@/hooks/use-toast';
 
 // Updated mock keyword generation logic
 const generateMockKeywords = (nicheInput: string, businessInfoInput: string): { category: string, keywords: string[] }[] => {
-  const region = "White Mountains AZ";
+  const region = "White Mountains AZ"; // This is still used for example generation, but not mentioned in UI hint
   const niche = nicheInput.trim();
   const businessInfo = businessInfoInput.trim();
 
@@ -149,7 +149,7 @@ export function KeywordForm() {
           </label>
           <Textarea 
             id="additionalInfo" 
-            placeholder="e.g., 'Boutique hotel in Pinetop offering pet-friendly rooms', 'Landscaping service in Show Low specializing in xeriscaping'"
+            placeholder="e.g., 'Boutique hotel offering pet-friendly rooms', 'Landscaping service specializing in xeriscaping'"
             className="w-full text-lg p-3" 
             maxLength={300}
             value={additionalInfo}
@@ -158,7 +158,7 @@ export function KeywordForm() {
             aria-required="true"
           />
           <p className="mt-2 text-sm text-muted-foreground">
-            Describe your business, including its type/industry, main services, and target audience in the White Mountains region. (Max {300 - additionalInfo.length} characters remaining)
+            Describe your business, including its type/industry, main services, and target audience. (Max {300 - additionalInfo.length} characters remaining)
             </p>
          </div>
         <Button type="submit" className="w-full md:w-auto text-lg py-3 px-6" size="lg" disabled={isLoading}>
