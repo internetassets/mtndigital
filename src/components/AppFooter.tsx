@@ -66,7 +66,11 @@ export function AppFooter() {
         </div>
         <div className="mt-12 border-t border-border pt-8">
           <p className="text-sm text-muted-foreground text-center">
-            &copy; {currentYear} Internet Assets. All rights reserved. Located in Show Low, AZ. Contact Russ Hunt at (928) 892-5233 or MARKETING@INTERNET-ASSETS.COM.
+            &copy; {currentYear} Internet Assets. All rights reserved.{' '}
+            <Link href="https://white-mountains.internet-assets.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary underline">
+              White Mountains, Arizona
+            </Link>
+            . Contact Russ Hunt at (928) 892-5233 or MARKETING@INTERNET-ASSETS.COM.
           </p>
         </div>
       </div>
