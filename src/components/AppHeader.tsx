@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { Logo } from '@/components/Logo';
 import { Button } from '@/components/ui/button';
-import { Menu } from 'lucide-react';
+import { Menu, Phone } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
 const navItems = [
@@ -33,7 +33,10 @@ export function AppHeader() {
                 <Link href="#contact">Contact Us</Link>
             </Button>
             <Button asChild>
-                <Link href="#contact">Free Consultation</Link>
+                <Link href="tel:9288925233">
+                  <Phone className="mr-2 h-4 w-4" />
+                  Call Us 928-892-5233
+                </Link>
             </Button>
         </div>
         <Sheet>
@@ -58,7 +61,10 @@ export function AppHeader() {
                 ))}
               </nav>
               <Button asChild className="w-full">
-                <Link href="#contact">Free Consultation</Link>
+                <Link href="tel:9288925233">
+                 <Phone className="mr-2 h-4 w-4" />
+                  Call Us 928-892-5233
+                </Link>
               </Button>
                <Button asChild variant="outline" className="w-full">
                 <Link href="#contact">Contact Us</Link>
@@ -70,3 +76,4 @@ export function AppHeader() {
     </header>
   );
 }
+
