@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { Logo } from '@/components/Logo';
 import { Button } from '@/components/ui/button';
-import { Menu } from 'lucide-react'; // Removed Phone import
+import { Menu } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
 const navItems = [
@@ -36,7 +36,7 @@ export function AppHeader() {
             <Button asChild variant="ghost">
                 <Link href="#contact">Contact Us</Link>
             </Button>
-            <Button asChild className="shadow-md">
+            <Button asChild className="shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out">
                 <Link href="tel:9288925233">
                   <span style={phoneNumberStyle}>
                     928-892-5233
@@ -65,7 +65,7 @@ export function AppHeader() {
                   </Link>
                 ))}
               </nav>
-              <Button asChild className="w-full shadow-md">
+              <Button asChild className="w-full shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out">
                 <Link href="tel:9288925233">
                  <span style={phoneNumberStyle}>
                     928-892-5233
