@@ -5,6 +5,7 @@ import Script from 'next/script';
 import {
   Dialog,
   DialogContent,
+  DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
 import type { ReactNode } from 'react';
@@ -24,6 +25,7 @@ export function BookingModal({ trigger }: BookingModalProps) {
     <Dialog>
       <DialogTrigger asChild>{trigger}</DialogTrigger>
       <DialogContent className="sm:max-w-[90vw] md:max-w-[80vw] lg:max-w-[700px] xl:max-w-[900px] p-0 overflow-y-auto max-h-[90vh]">
+        <DialogTitle className="sr-only">Booking Calendar</DialogTitle>
         {/*
           The iframe's height is expected to be set by the form_embed.js script.
           - width: '100%' makes it responsive horizontally.
@@ -44,7 +46,7 @@ export function BookingModal({ trigger }: BookingModalProps) {
           }}
           scrolling="no"
           id={iframeId}
-          title="Booking Calendar"
+          title="Booking Calendar" // Keeping the iframe title as well for direct iframe accessibility
         ></iframe>
         <Script
           src="https://api.internet-assets.com/js/form_embed.js"
