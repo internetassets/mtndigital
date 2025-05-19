@@ -1,6 +1,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import Script from 'next/script';
 import { CheckCircle, Mountain, MapPin, Phone, Mail, Award, CircleUser, GraduationCap, Briefcase, Dog, Club, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -44,6 +45,8 @@ export function WhyChooseUsSection() {
               className="object-cover w-full h-full transform transition-transform duration-500 hover:scale-105"
               data-ai-hint="mountain landscape"
               loading="lazy"
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/+F9PQAI8wNPvd7POQAAAABJRU5ErkJggg=="
               sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 1023px) calc(100vw - 48px), 576px"
             />
           </div>
@@ -148,7 +151,7 @@ export function WhyChooseUsSection() {
               </Card>
             </div>
 
-            <div className="lg:col-span-1">
+            <div className="lg:col-span-1 space-y-8"> {/* Ensure cards in this column stack */}
               <Card className="shadow-lg">
                 <CardHeader>
                   <CardTitle className="text-2xl flex items-center">
@@ -175,6 +178,42 @@ export function WhyChooseUsSection() {
                   </p>
                 </CardContent>
               </Card>
+
+              <Card className="shadow-lg">
+                <CardHeader>
+                  <CardTitle className="text-2xl flex items-center">
+                    <Mail className="h-7 w-7 mr-3 text-primary" />
+                    Get In Touch
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="rounded-lg overflow-hidden border">
+                    <iframe
+                      src="https://api.internet-assets.com/widget/form/2OCDKAJYPIaTVWpgznK2"
+                      style={{ width:'100%', border:'none', borderRadius:'4px', minHeight: '487px' }}
+                      id="inline-2OCDKAJYPIaTVWpgznK2" 
+                      data-layout="{'id':'INLINE'}"
+                      data-trigger-type="alwaysShow"
+                      data-trigger-value=""
+                      data-activation-type="alwaysActivated"
+                      data-activation-value=""
+                      data-deactivation-type="neverDeactivate"
+                      data-deactivation-value=""
+                      data-form-name="Internet Assets New Lead SHOW LOW"
+                      data-height="487"
+                      data-layout-iframe-id="inline-2OCDKAJYPIaTVWpgznK2"
+                      data-form-id="2OCDKAJYPIaTVWpgznK2"
+                      title="Internet Assets New Lead SHOW LOW"
+                      scrolling="no"
+                    >
+                    </iframe>
+                  </div>
+                  <Script 
+                    src="https://api.internet-assets.com/js/form_embed.js" 
+                    strategy="lazyOnload" 
+                  />
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
@@ -182,3 +221,5 @@ export function WhyChooseUsSection() {
     </section>
   );
 }
+
+    
