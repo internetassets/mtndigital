@@ -6,7 +6,7 @@ import Image from 'next/image';
 const testimonials = [
   {
     logo: <Leaf className="h-10 w-10 text-primary mb-3" />,
-    website: "WWW.NORTHWOODSAZ.COM",
+    website: "NorthwoodsAZ.com Testimonial: Website & SEO Optimization",
     name: "Maria S.",
     title: "Owner",
     services: "Website, SEO, google",
@@ -20,7 +20,7 @@ const testimonials = [
   },
   {
     logo: <Truck className="h-10 w-10 text-primary mb-3" />,
-    website: "WWW.SWEETLOGISTICSLLC.COM",
+    website: "SweetLogisticsLLC.com Testimonial: SEO & PPC Lead Generation Impact",
     name: "Cyndy L.",
     title: "Owner",
     services: "Website, SEO, PPC",
@@ -40,7 +40,7 @@ export function TestimonialsSection() {
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl">
-            What <span className="text-primary">Others Are Saying</span>
+            White Mountains Business SEO Success: <span className="text-primary">Client Testimonials</span>
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
             Hear from businesses we've helped succeed online.
@@ -67,7 +67,7 @@ export function TestimonialsSection() {
                   )
                 )}
                 <CardTitle className="text-lg font-semibold text-primary tracking-wide">
-                  "{testimonial.website}"
+                  {testimonial.website}
                 </CardTitle>
                  <hr className="border-border my-2" />
               </CardHeader>

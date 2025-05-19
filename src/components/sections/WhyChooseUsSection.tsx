@@ -68,7 +68,7 @@ export function WhyChooseUsSection() {
                 <CardHeader>
                   <CardTitle className="text-2xl flex items-center">
                     <Mountain className="h-7 w-7 mr-3 text-primary" />
-                    Our Mission &amp; Presence
+                    Our Mission: Driving White Mountains Digital Success with Expert SEO
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4 text-lg">
@@ -122,7 +122,7 @@ export function WhyChooseUsSection() {
                 <CardHeader>
                   <CardTitle className="text-2xl flex items-center">
                     <CircleUser className="h-7 w-7 mr-3 text-primary" />
-                    Meet Russ Hunt - Founder
+                    Meet Russ Hunt: ASU Grad & White Mountains SEO Expert
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3 text-lg">
@@ -151,12 +151,12 @@ export function WhyChooseUsSection() {
               </Card>
             </div>
 
-            <div className="lg:col-span-1 space-y-8"> {/* Ensure cards in this column stack */}
+            <div className="lg:col-span-1 space-y-8"> 
               <Card className="shadow-lg">
                 <CardHeader>
                   <CardTitle className="text-2xl flex items-center">
                     <MapPin className="h-7 w-7 mr-3 text-primary" />
-                    Find Us in Show Low, AZ
+                    Find Our Show Low, AZ Hub for White Mountains & Pinetop SEO Services
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -183,7 +183,7 @@ export function WhyChooseUsSection() {
                 <CardHeader>
                   <CardTitle className="text-2xl flex items-center">
                     <Mail className="h-7 w-7 mr-3 text-primary" />
-                    Get In Touch
+                    Contact Us for White Mountains SEO & Digital Marketing
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -221,5 +221,3 @@ export function WhyChooseUsSection() {
     </section>
   );
 }
-
-    

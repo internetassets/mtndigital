@@ -5,37 +5,37 @@ import { Search, MonitorSmartphone, PenTool, Users, BarChart3, Mail } from 'luci
 const services = [
   {
     icon: <Search className="h-10 w-10 text-primary mb-4" />,
-    title: 'SEO Optimization',
+    title: 'White Mountains AZ SEO Optimization: Boost Local Rankings',
     description: 'Boost your White Mountains AZ business ranking and attract more local customers with our expert SEO optimization. We tailor strategies for maximum online visibility and organic traffic growth.',
     keywords: 'SEO services White Mountains, search engine optimization Arizona, business ranking Show Low, local organic traffic'
   },
   {
     icon: <MonitorSmartphone className="h-10 w-10 text-primary mb-4" />,
-    title: 'Custom Web Design',
+    title: 'Custom Web Design in Show Low: High-Converting & Responsive Sites',
     description: 'Get a stunning, responsive custom web design that captivates Show Low & White Mountains visitors and converts them into loyal customers. Our websites are built for modern business success and user experience.',
     keywords: 'web design Show Low, responsive websites White Mountains, user experience design Arizona, website development Pinetop'
   },
   {
     icon: <PenTool className="h-10 w-10 text-primary mb-4" />,
-    title: 'Content Marketing',
+    title: 'Strategic Content Marketing: LSI Keywords & White Mountains Authority',
     description: 'Engage your White Mountains audience with compelling, SEO-friendly content marketing. We write optimized content that tells your unique story and builds authority in the local market.',
     keywords: 'content strategy White Mountains, business blogging Show Low, brand storytelling Arizona, SEO content creation'
   },
   {
     icon: <Users className="h-10 w-10 text-primary mb-4" />,
-    title: 'Social Media Management',
+    title: 'White Mountains Social Media: Local Engagement & Brand Growth',
     description: 'Connect with your White Mountains community and build brand loyalty through effective social media strategies tailored for your local audience and business type.',
     keywords: 'social media marketing White Mountains, SMM Show Low, community management Arizona, brand engagement Pinetop'
   },
   {
     icon: <BarChart3 className="h-10 w-10 text-primary mb-4" />,
-    title: 'PPC Advertising',
+    title: 'Targeted PPC for White Mountains: Maximize ROI with Google Ads',
     description: 'Drive immediate, targeted traffic and leads for your White Mountains business with our expert pay-per-click campaigns. We focus on maximizing your ROI in the local market.',
     keywords: 'PPC services White Mountains, Google Ads Show Low, paid advertising Arizona, local online ad campaigns'
   },
   {
     icon: <Mail className="h-10 w-10 text-primary mb-4" />,
-    title: 'Email Marketing',
+    title: 'Effective Email Marketing for White Mountains Customer Retention',
     description: 'Nurture leads and retain customers in the White Mountains area with personalized email campaigns designed for high engagement and conversion rates.',
     keywords: 'email campaigns White Mountains, marketing automation Show Low, customer retention Arizona, local lead nurturing'
   },

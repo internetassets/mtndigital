@@ -7,7 +7,7 @@ import { ArrowRight } from 'lucide-react';
 
 const caseStudies = [
   {
-    title: 'White Mountains Solar Boost',
+    title: 'Case Study: White Mountains Solar - SEO & Local Lead Generation',
     client: 'Local Solar Panel Installers',
     imageSrc: 'https://www.wmsolaraz.com/wp-content/uploads/2024/02/WHITE-MOUNTAINS-SOLAR-SOLAR-PANELS-SOLAR-KITS-AND-LOCAL-SHOW-LOW-AZ-SOLAR-PANLE-INSTALLERS-928-251-0114-92-845x684.webp',
     imageAlt: 'White Mountains Solar project image with solar panels',
@@ -19,7 +19,7 @@ const caseStudies = [
     linkHref: 'https://www.wmsolaraz.com/off-grid-solar/'
   },
   {
-    title: 'Sweet Logistics Car Shipping',
+    title: 'Case Study: Sweet Logistics - National SEO & Car Shipping Keywords',
     client: 'Enclosed Car Shipping',
     imageSrc: 'https://www.sweetlogisticsllc.com/wp-content/uploads/2024/02/5eaf8961d7d621c56d37ffbcb834203a-e1633835850736-836x471x117x0x601x471x1634255180-1.jpg',
     imageAlt: 'Sweet Logistics car shipping service image',
@@ -31,7 +31,7 @@ const caseStudies = [
     linkHref: 'https://www.sweetlogisticsllc.com/'
   },
   {
-    title: 'WM Portable Buildings Showcase',
+    title: 'Case Study: WM Portable Buildings - Local SEO & Graceland Sheds Showcase',
     client: 'Graceland Portable Buildings Dealer',
     imageSrc: 'https://www.wmportablebuildings.com/wp-content/uploads/2024/11/GRACELAND-PORTABLE-BUILDINGS-LOOK-FOR-THE-G-SHOW-LOW-AZ-look-for-the-G.png',
     imageAlt: 'WM Portable Buildings - Graceland Portable Buildings Dealer',
@@ -50,7 +50,7 @@ export function CaseStudiesSection() {
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl">
-            Proven <span className="text-primary">Success Stories</span>
+            Proven <span className="text-primary">White Mountains SEO Success: Digital Marketing & LSI Keyword Case Studies</span>
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
             See how we've helped businesses like yours thrive online.
@@ -92,4 +92,3 @@ export function CaseStudiesSection() {
     </section>
   );
 }
-
