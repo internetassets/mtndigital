@@ -6,11 +6,11 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 const benefits = [
-  { text: 'Deep understanding of digital marketing trends and best practices.' },
-  { text: 'Proven SEO results for businesses, driving growth and visibility.' },
-  { text: 'Personalized digital strategies tailored to your unique business goals.' },
-  { text: 'Transparent communication and detailed reporting on campaign progress.' },
-  { text: 'Dedicated team passionate about helping businesses build valuable internet assets.' },
+  { text: 'Deep understanding of digital marketing trends and White Mountains local SEO best practices.' },
+  { text: 'Proven SEO results driving growth and online visibility for businesses in Show Low and surrounding areas.' },
+  { text: 'Personalized digital strategies tailored to your unique business goals in the White Mountains market.' },
+  { text: 'Transparent communication and detailed reporting on campaign progress for your peace of mind.' },
+  { text: 'Dedicated local team passionate about helping White Mountains businesses build valuable, high-ranking internet assets.' },
 ];
 
 export function WhyChooseUsSection() {
@@ -21,10 +21,10 @@ export function WhyChooseUsSection() {
           <div className="order-2 lg:order-1">
             <span className="text-sm font-semibold uppercase tracking-wider text-primary">Why Partner With Us?</span>
             <h2 className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl">
-              Your Trusted Partner for <span className="text-primary">Digital Growth</span>
+              Your Trusted <span className="text-primary">White Mountains Digital Marketing Partner for SEO & Non-Competitive Keyword Growth</span>
             </h2>
             <p className="mt-6 text-lg text-muted-foreground">
-              At Internet Assets, we combine cutting-edge digital marketing expertise with a commitment to understanding your business. We craft strategies that deliver real results and help you build a strong, valuable online presence.
+              At Internet Assets, we combine cutting-edge White Mountains digital marketing expertise with a deep understanding of your unique business. We craft tailored SEO and content strategies that deliver measurable results, helping Show Low and White Mountains businesses build a strong, valuable online presence and achieve significant growth.
             </p>
             <ul className="mt-8 space-y-4">
               {benefits.map((benefit, index) => (
@@ -38,7 +38,7 @@ export function WhyChooseUsSection() {
           <div className="order-1 lg:order-2 aspect-w-4 aspect-h-3 lg:aspect-w-1 lg:aspect-h-1 rounded-lg overflow-hidden shadow-2xl">
             <Image
               src="https://storage.googleapis.com/msgsndr/Gzu2iW2sZuZiVlnRqNtN/media/6823d47175cc4686c35fee37.jpeg"
-              alt="Scenic mountain landscape representing partnership and trust"
+              alt="Scenic mountain landscape representing partnership and trust in the White Mountains for Internet Assets"
               width={800}
               height={600}
               className="object-cover w-full h-full transform transition-transform duration-500 hover:scale-105"
@@ -52,7 +52,7 @@ export function WhyChooseUsSection() {
         <div className="mt-16 md:mt-24">
           <div className="text-center mb-12 md:mb-16">
             <h3 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl md:text-4xl">
-              More About <span className="text-primary">Internet Assets</span>
+              More About <span className="text-primary">Internet Assets: Your Local SEO & LSI Keyword Experts in Show Low & White Mountains</span>
             </h3>
             <p className="mt-3 max-w-xl mx-auto text-lg text-muted-foreground">
               Your dedicated partner for digital success in the White Mountains.
@@ -72,7 +72,7 @@ export function WhyChooseUsSection() {
                   <p>
                     Internet Assets is committed to empowering local businesses in{' '}
                     <strong>White Mountains, AZ &amp; Show Low, AZ</strong> through innovative digital marketing solutions.
-                    With <strong>15 years of experience</strong>, we specialize in growing your online footprint and turning it into a valuable asset.
+                    With <strong>15 years of experience</strong>, we specialize in growing your online footprint and turning it into a valuable asset. Our focus includes local SEO, LSI keyword strategies, and effective content marketing.
                   </p>
                   <div className="space-y-2">
                     <div className="flex items-center">
@@ -127,7 +127,7 @@ export function WhyChooseUsSection() {
                      <Avatar className="h-24 w-24 mr-4">
                        <AvatarImage 
                         src="https://storage.googleapis.com/msgsndr/Gzu2iW2sZuZiVlnRqNtN/media/6823d471b44e3c41ed37ded7.jpeg" 
-                        alt="Russ Hunt - Internet Assets Founder" 
+                        alt="Russ Hunt - Internet Assets Founder & White Mountains SEO Expert" 
                         data-ai-hint="person portrait"
                         className="object-cover object-top"
                         />
@@ -136,7 +136,7 @@ export function WhyChooseUsSection() {
                      <p className="text-xl font-semibold">Russ Hunt, ASU Small Business Graduate</p>
                   </div>
                   <p>
-                    Russ brings a wealth of knowledge and a passion for helping small businesses thrive. His diverse background enriches his approach to digital strategy.
+                    Russ brings a wealth of knowledge from his ASU education and diverse professional background, including real estate and hospitality, to help White Mountains small businesses thrive online. He applies his passion to digital strategy and SEO.
                   </p>
                   <ul className="list-none space-y-2 pl-0">
                     <li className="flex items-center"><GraduationCap className="h-5 w-5 mr-2 text-primary" /><span>ASU Small Business Graduate</span></li>
@@ -166,7 +166,7 @@ export function WhyChooseUsSection() {
                       allowFullScreen={false}
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                      title="Google Map of Show Low, AZ"
+                      title="Google Map of Show Low, AZ - Internet Assets Service Area"
                       className="absolute inset-0 w-full h-full"
                     ></iframe>
                   </div>
@@ -182,4 +182,3 @@ export function WhyChooseUsSection() {
     </section>
   );
 }
-
