@@ -9,7 +9,7 @@ export function KeywordToolSection() {
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl">
-            Discover Your Keywords: <span className="text-primary">SEO Keyword Generator</span>
+            What Keywords Should Your White Mountains Business Target? <span className="text-primary">Try Our Free SEO Idea Tool.</span>
           </h2>
           <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
             Explore potential keywords to target your ideal customers. Get a glimpse of how we approach SEO strategy.

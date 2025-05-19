@@ -9,7 +9,7 @@ export function ContactCtaSection() {
     <section id="contact" className="py-16 md:py-24 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground">
       <div className="container mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-          Ready for Top SEO & High-Traffic Results in White Mountains? Grow Your Internet Assets!
+          Ready to Elevate Your White Mountains Business Online? <span className="block">Let's Talk!</span>
         </h2>
         <p className="mt-6 max-w-2xl mx-auto text-lg text-primary-foreground/90">
           Let's discuss how Internet Assets can elevate your online presence. Schedule your free, no-obligation consultation today and take the first step towards digital market leadership.
@@ -41,7 +41,7 @@ export function ContactCtaSection() {
           <div className="flex items-start space-x-4 p-6 bg-background/10 rounded-lg">
             <Mail className="h-8 w-8 text-accent flex-shrink-0 mt-1" />
             <div>
-              <h3 className="text-xl font-semibold">Email Us for SEO & Web Design Quotes in White Mountains</h3>
+              <h3 className="text-xl font-semibold">Email Us for Your White Mountains SEO & Web Design Quote</h3>
               <p className="text-primary-foreground/80">Get a response within 24 hours</p>
               <a href="mailto:MARKETING@INTERNET-ASSETS.COM" className="hover:underline text-lg break-all">MARKETING@INTERNET-ASSETS.COM</a>
             </div>
@@ -49,7 +49,7 @@ export function ContactCtaSection() {
           <div className="flex items-start space-x-4 p-6 bg-background/10 rounded-lg">
             <MapPin className="h-8 w-8 text-accent flex-shrink-0 mt-1" />
             <div>
-              <h3 className="text-xl font-semibold">Local Business Website SEO Marketing</h3>
+              <h3 className="text-xl font-semibold">Local Digital Marketing for Your White Mountains & Show Low Business</h3>
               <p className="text-primary-foreground/80">Serving businesses locally to get more calls, leads and sales.</p>
               <p className="text-lg">White Mountains, AZ & Show Low, AZ</p>
             </div>
@@ -62,7 +62,7 @@ export function ContactCtaSection() {
               Show Low, Pinetop-Lakeside, Snowflake, Taylor, Heber-Overgaard, Springerville, Eagar, St. Johns, Greer, Vernon, Linden, Concho, Shumway, Clay Springs.
             </p>
           </div>
-          <h3 className="text-xl font-semibold mb-6">Connect With Us: White Mountains Digital Marketing Leaders</h3>
+          <h3 className="text-xl font-semibold mb-6">Connect with Our White Mountains Digital Marketing Team</h3>
           <div className="flex justify-center space-x-6">
             <Link href="https://www.facebook.com/internetassets" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-accent">
               <span className="sr-only">Facebook</span>

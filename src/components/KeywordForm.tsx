@@ -9,7 +9,6 @@ import { Textarea } from '@/components/ui/textarea';
 import { Lightbulb } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
-// Updated mock keyword generation logic
 const generateMockKeywords = (nicheInput: string, businessInfoInput: string): { category: string, keywords: string[] }[] => {
   const niche = nicheInput.trim();
   const businessInfo = businessInfoInput.trim();
@@ -22,17 +21,15 @@ const generateMockKeywords = (nicheInput: string, businessInfoInput: string): { 
     const businessWords = businessInfo.toLowerCase().split(' ').filter(word => !commonBusinessWords.includes(word) && word.length > 2);
     mainSubject = businessWords.slice(0, 2).join(' ');
     if (!mainSubject) {
-        mainSubject = "local business"; // Fallback if parsing fails
+        mainSubject = "local business"; 
     }
   } else {
-    mainSubject = "digital marketing"; // Default fallback
+    mainSubject = "digital marketing"; 
   }
 
-  // Ensure mainSubject is not empty or just whitespace before proceeding
   if (!mainSubject.trim()) {
-    mainSubject = "keyword ideas"; // A more generic fallback if all else fails
+    mainSubject = "keyword ideas"; 
   }
-
 
   const highTrafficKeywordsList: string[] = [
     `${mainSubject}`,
@@ -58,7 +55,6 @@ const generateMockKeywords = (nicheInput: string, businessInfoInput: string): { 
     `understanding ${mainSubject}`,
   ];
 
-
   const nonCompetitiveKeywordsList: string[] = [
     `affordable ${mainSubject}`,
     `top-rated ${mainSubject}`,
@@ -74,19 +70,17 @@ const generateMockKeywords = (nicheInput: string, businessInfoInput: string): { 
     const specificBusinessAction = businessInfo.split(' ').slice(0,2).join(' ');
     nonCompetitiveKeywordsList.push(`${specificBusinessAction} for ${niche}`);
     nonCompetitiveKeywordsList.push(`how to find ${mainSubject} for ${niche}`);
-    lsiHighTrafficKeywordsList.push(`${mainSubject} for ${specificBusinessAction.split(' ')[0]}`); // Add a niche-specific LSI keyword
+    lsiHighTrafficKeywordsList.push(`${mainSubject} for ${specificBusinessAction.split(' ')[0]}`);
   }
 
-
   const pickRandom = (arr: string[], count: number) => {
-    const uniqueArr = Array.from(new Set(arr)); // Ensure unique keywords before picking
+    const uniqueArr = Array.from(new Set(arr));
     const shuffled = [...uniqueArr].sort(() => 0.5 - Math.random());
     return shuffled.slice(0, count);
   }
 
   const finalCategories = [];
 
-  // Filter out keywords that are just the mainSubject or too short after removing mainSubject
   const filterKeywords = (keywords: string[], subject: string) => {
     return keywords.filter(kw => kw.trim().toLowerCase() !== subject.toLowerCase() && kw.replace(subject, "").trim().length > 1);
   }
@@ -118,14 +112,12 @@ const generateMockKeywords = (nicheInput: string, businessInfoInput: string): { 
     });
   }
 
-  // If no keywords were generated for any category (e.g., mainSubject was too generic), add a fallback
   if (finalCategories.every(cat => cat.keywords.length === 0)) {
     finalCategories.push({
         category: "Example Keywords",
         keywords: [`best ${mainSubject} services`, `affordable ${mainSubject}`, `learn about ${mainSubject}`]
     })
   }
-
 
   return finalCategories;
 };
@@ -150,7 +142,6 @@ export function KeywordForm() {
     }
 
     setIsLoading(true);
-    // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000));
     const generatedKeywords = generateMockKeywords(niche, additionalInfo);
     setKeywordCategories(generatedKeywords);
@@ -222,7 +213,7 @@ export function KeywordForm() {
             <div className="flex items-center mb-6">
               <Lightbulb className="h-8 w-8 text-accent mr-3" />
               <h4 className="text-xl font-semibold text-foreground">
-                 Keyword Ideas Based On Your Input
+                 Your Custom Keyword Strategy Ideas
               </h4>
             </div>
             <div className="space-y-6">

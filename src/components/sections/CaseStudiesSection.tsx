@@ -50,7 +50,7 @@ export function CaseStudiesSection() {
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl">
-            Proven <span className="text-primary">White Mountains SEO Success: Digital Marketing & LSI Keyword Case Studies</span>
+            See Our Success: <span className="text-primary">White Mountains Digital Marketing & SEO Results</span>
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
             See how we've helped businesses like yours thrive online.

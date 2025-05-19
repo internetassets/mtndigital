@@ -22,7 +22,7 @@ export function WhyChooseUsSection() {
           <div className="order-2 lg:order-1">
             <span className="text-sm font-semibold uppercase tracking-wider text-primary">Why Partner With Us?</span>
             <h2 className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl">
-              Your Trusted <span className="text-primary">White Mountains Digital Marketing Partner for SEO & Non-Competitive Keyword Growth</span>
+              Why Choose Internet Assets for Your <span className="text-primary">White Mountains Digital Marketing?</span>
             </h2>
             <p className="mt-6 text-lg text-muted-foreground">
               At Internet Assets, we combine cutting-edge White Mountains digital marketing expertise with a deep understanding of your unique business. We craft tailored SEO and content strategies that deliver measurable results, helping Show Low and White Mountains businesses build a strong, valuable online presence and achieve significant growth.
@@ -55,7 +55,7 @@ export function WhyChooseUsSection() {
         <div className="mt-16 md:mt-24">
           <div className="text-center mb-12 md:mb-16">
             <h3 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl md:text-4xl">
-              More About <span className="text-primary">Internet Assets: Your Local SEO & LSI Keyword Experts in Show Low & White Mountains</span>
+              About Internet Assets: <span className="text-primary">Your Local Experts for White Mountains SEO</span>
             </h3>
             <p className="mt-3 max-w-xl mx-auto text-lg text-muted-foreground">
               Your dedicated partner for digital success in the White Mountains.
@@ -68,7 +68,7 @@ export function WhyChooseUsSection() {
                 <CardHeader>
                   <CardTitle className="text-2xl flex items-center">
                     <Mountain className="h-7 w-7 mr-3 text-primary" />
-                    Our Mission: Driving White Mountains Digital Success with Expert SEO
+                    Our Mission: Helping White Mountains Businesses Succeed Online with SEO.
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4 text-lg">
@@ -122,7 +122,7 @@ export function WhyChooseUsSection() {
                 <CardHeader>
                   <CardTitle className="text-2xl flex items-center">
                     <CircleUser className="h-7 w-7 mr-3 text-primary" />
-                    Meet Russ Hunt: ASU Grad & White Mountains SEO Expert
+                    Meet Russ Hunt: Founder & Digital Strategist for White Mountains Businesses.
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3 text-lg">
@@ -156,7 +156,7 @@ export function WhyChooseUsSection() {
                 <CardHeader>
                   <CardTitle className="text-2xl flex items-center">
                     <MapPin className="h-7 w-7 mr-3 text-primary" />
-                    Find Our Show Low, AZ Hub for White Mountains & Pinetop SEO Services
+                    Our Show Low Hub for White Mountains & Pinetop-Lakeside SEO
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -183,7 +183,7 @@ export function WhyChooseUsSection() {
                 <CardHeader>
                   <CardTitle className="text-2xl flex items-center">
                     <Mail className="h-7 w-7 mr-3 text-primary" />
-                    Contact Us for White Mountains SEO & Digital Marketing
+                    Ready to Talk? Contact Us for White Mountains Digital Marketing Solutions.
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
