@@ -7,6 +7,7 @@ import {
   DialogContent,
   DialogTitle,
   DialogTrigger,
+  DialogDescription,
 } from "@/components/ui/dialog";
 import type { ReactNode } from 'react';
 
@@ -26,6 +27,9 @@ export function BookingModal({ trigger }: BookingModalProps) {
       <DialogTrigger asChild>{trigger}</DialogTrigger>
       <DialogContent className="sm:max-w-[90vw] md:max-w-[80vw] lg:max-w-[700px] xl:max-w-[900px] p-0 overflow-y-auto max-h-[90vh]">
         <DialogTitle className="sr-only">Booking Calendar</DialogTitle>
+        <DialogDescription className="sr-only">
+          A calendar for booking appointments.
+        </DialogDescription>
         {/*
           The iframe's height is expected to be set by the form_embed.js script.
           - width: '100%' makes it responsive horizontally.

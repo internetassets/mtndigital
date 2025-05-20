@@ -40,9 +40,8 @@ export function WhyChooseUsSection() {
             <Image
               src="https://storage.googleapis.com/msgsndr/Gzu2iW2sZuZiVlnRqNtN/media/6823d47175cc4686c35fee37.jpeg"
               alt="Scenic mountain landscape representing partnership and trust in the White Mountains for Internet Assets"
-              width={800}
-              height={600}
-              className="object-cover w-full h-full transform transition-transform duration-500 hover:scale-105"
+              fill={true}
+              className="object-cover transform transition-transform duration-500 hover:scale-105"
               data-ai-hint="mountain landscape"
               loading="lazy"
               placeholder="blur"
@@ -192,7 +191,7 @@ export function WhyChooseUsSection() {
                       src="https://api.internet-assets.com/widget/form/2OCDKAJYPIaTVWpgznK2"
                       style={{ width:'100%', border:'none', borderRadius:'4px', minHeight: '487px' }}
                       id="inline-2OCDKAJYPIaTVWpgznK2" 
-                      data-layout="{'id':'INLINE'}"
+                      data-layout='{"id":"INLINE"}'
                       data-trigger-type="alwaysShow"
                       data-trigger-value=""
                       data-activation-type="alwaysActivated"
