@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   title: 'Internet Assets | White Mountains Digital Marketing | 928-892-5233',
   description: 'Boost your White Mountains AZ business with expert Digital Marketing, SEO Services & Web Design from Internet Assets. Call 928-892-5233 for high-traffic results and local SEO success.',
   icons: {
-    icon: 'https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/Gzu2iW2sZuZiVlnRqNtN/media/664c46f47068a56568349c0d.png',
+    icon: 'https://storage.googleapis.com/msgsndr/Gzu2iW2sZuZiVlnRqNtN/media/6823d4713b4b01f9df9669e3.png',
   }
 };
 
