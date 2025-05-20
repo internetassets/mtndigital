@@ -9,7 +9,7 @@ export function ContactCtaSection() {
     <section id="contact" className="py-16 md:py-24 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground">
       <div className="container mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-          Ready for Top SEO & High-Traffic Results in White Mountains? <span className="block">Grow Your Internet Assets!</span>
+          Ready to Elevate Your White Mountains Business? <span className="block">Contact Internet Assets Today!</span>
         </h2>
         <p className="mt-6 max-w-2xl mx-auto text-lg text-primary-foreground/90">
           Let's discuss how Internet Assets can elevate your online presence. Schedule your free, no-obligation consultation today and take the first step towards digital market leadership.
@@ -59,7 +59,7 @@ export function ContactCtaSection() {
           <div className="mb-8">
             <h4 className="text-xl font-semibold mb-3 text-accent">Proudly Serving the White Mountains Area:</h4>
             <h4 className="text-md text-primary-foreground/90 leading-relaxed font-normal tracking-normal">
-              Show Low, Pinetop-Lakeside, Snowflake, Taylor, Heber-Overgaard, Springerville, Eagar, St. Johns, Greer, Vernon, Linden, Concho, Shumway, Clay Springs.
+              Show Low, Pinetop-Lakeside, Snowflake, Taylor, Heber-Overgaard, Springerville, Eagar, St. Johns, Greer, Vernon, Linden, Concho, Shumway, Clay Springs, White Mountain Lakes.
             </h4>
           </div>
           <h3 className="text-xl font-semibold mb-6">Connect With Us: White Mountains Digital Marketing Leaders</h3>
