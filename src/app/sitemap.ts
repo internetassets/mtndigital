@@ -1,7 +1,7 @@
 
 import type { MetadataRoute } from 'next';
 
-const BASE_URL = 'https://white-mountains.internet-assets.com'; // Replace with your actual domain
+const BASE_URL = 'https://rahuntinternetassets.com'; // Updated domain
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // For a single-page application (SPA) with hash-based routing for sections,
@@ -29,3 +29,4 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [mainPage];
 }
+
