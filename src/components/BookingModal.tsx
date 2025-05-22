@@ -25,7 +25,7 @@ export function BookingModal({ trigger }: BookingModalProps) {
   return (
     <Dialog>
       <DialogTrigger asChild>{trigger}</DialogTrigger>
-      <DialogContent className="sm:max-w-[90vw] md:max-w-[80vw] lg:max-w-[700px] xl:max-w-[900px] p-0 overflow-y-auto max-h-[90vh]">
+      <DialogContent className="sm:max-w-[90vw] md:max-w-[80vw] lg:max-w-[800px] xl:max-w-[1000px] p-0 overflow-y-auto max-h-[90vh]">
         <DialogTitle className="sr-only">Booking Calendar</DialogTitle>
         <DialogDescription className="sr-only">
           A calendar for booking appointments.
@@ -46,7 +46,7 @@ export function BookingModal({ trigger }: BookingModalProps) {
             border: 'none',
             overflow: 'hidden',
             display: 'block',
-            minHeight: '600px', // Sensible minimum height
+            minHeight: '700px', // Increased minimum height
           }}
           scrolling="no"
           id={iframeId}
