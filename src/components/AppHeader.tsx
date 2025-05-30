@@ -1,4 +1,3 @@
-
 import Link from 'next/link';
 import { Logo } from '@/components/Logo';
 import { Button } from '@/components/ui/button';
@@ -10,6 +9,7 @@ const navItems = [
   { name: 'Case Studies', href: '#case-studies' },
   { name: 'Keyword Tool', href: '#keyword-tool' },
   { name: 'Why Us', href: '#why-us' },
+  { name: 'GoHighLevel', href: 'https://highlevel.rahuntinternetassets.com/' },
 ];
 
 export function AppHeader() {
